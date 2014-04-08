@@ -40,7 +40,7 @@
 
     SquareGameViewController *gameController = [[SquareGameViewController alloc] initWithNibName:NSStringFromClass([SquareGameViewController class]) bundle:nil];
 
-    [self presentViewController:gameController animated:NO completion:nil];
+    [[self navigationController] pushViewController:gameController animated:NO];
 }
 
 @end

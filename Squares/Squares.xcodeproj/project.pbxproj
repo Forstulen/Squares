@@ -9,7 +9,19 @@
 /* Begin PBXBuildFile section */
 		7F2EF19B18F04C2E00ED4852 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2EF19A18F04C2E00ED4852 /* QuartzCore.framework */; };
 		7F2EF1A018F0A95A00ED4852 /* SquareGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF19F18F0A95A00ED4852 /* SquareGrid.m */; };
-		7F2EF1A218F0AC8C00ED4852 /* grid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F2EF1A118F0AC8B00ED4852 /* grid.plist */; };
+		7F2EF1A618F15A5D00ED4852 /* SquareGameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF1A418F15A5D00ED4852 /* SquareGameOverViewController.m */; };
+		7F2EF1A718F15A5D00ED4852 /* SquareGameOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2EF1A518F15A5D00ED4852 /* SquareGameOverViewController.xib */; };
+		7F2EF1AE18F202B200ED4852 /* UIImage+UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF1AD18F202B200ED4852 /* UIImage+UIImageAdditions.m */; };
+		7F2EF1B318F226C200ED4852 /* SquareGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F2EF1B218F226C200ED4852 /* SquareGameViewController.xib */; };
+		7F2EF1B818F2DA5000ED4852 /* SquareIndestructible.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF1B718F2DA5000ED4852 /* SquareIndestructible.m */; };
+		7F2EF1BB18F2E55600ED4852 /* SquareGameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF1BA18F2E55600ED4852 /* SquareGameOver.m */; };
+		7F2EF1BE18F2EF7200ED4852 /* SquareResilient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF1BD18F2EF7200ED4852 /* SquareResilient.m */; };
+		7F2EF1C118F2F99600ED4852 /* SquareExponential.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF1C018F2F99600ED4852 /* SquareExponential.m */; };
+		7F2EF1C618F3463800ED4852 /* HAL9000-2001_A_Space_Odyssey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F2EF1C218F3463800ED4852 /* HAL9000-2001_A_Space_Odyssey.jpg */; };
+		7F2EF1C718F3463800ED4852 /* square diago.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7F2EF1C318F3463800ED4852 /* square diago.gif */; };
+		7F2EF1C818F3463800ED4852 /* square white.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2EF1C418F3463800ED4852 /* square white.png */; };
+		7F2EF1C918F3463800ED4852 /* squate tiles.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7F2EF1C518F3463800ED4852 /* squate tiles.jpeg */; };
+		7F2EF1CD18F3693F00ED4852 /* SquareGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2EF1CC18F3693F00ED4852 /* SquareGameView.m */; };
 		7F4108EC18EEDC42007F8750 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4108EB18EEDC42007F8750 /* Foundation.framework */; };
 		7F4108EE18EEDC42007F8750 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4108ED18EEDC42007F8750 /* CoreGraphics.framework */; };
 		7F4108F018EEDC42007F8750 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4108EF18EEDC42007F8750 /* UIKit.framework */; };
@@ -25,8 +37,7 @@
 		7F41092818EEF1EC007F8750 /* SquareMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41092618EEF1EC007F8750 /* SquareMenuViewController.m */; };
 		7F41092918EEF1EC007F8750 /* SquareMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F41092718EEF1EC007F8750 /* SquareMenuViewController.xib */; };
 		7F41092D18EEF381007F8750 /* SquareGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41092B18EEF381007F8750 /* SquareGameViewController.m */; };
-		7F41092E18EEF381007F8750 /* SquareGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F41092C18EEF381007F8750 /* SquareGameViewController.xib */; };
-		7F41093118EEF847007F8750 /* SquareImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41093018EEF847007F8750 /* SquareImage.m */; };
+		7F41093118EEF847007F8750 /* SquareBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41093018EEF847007F8750 /* SquareBase.m */; };
 		7F41093318EEFFB7007F8750 /* square-clip-art-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F41093218EEFFB7007F8750 /* square-clip-art-15.png */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +56,26 @@
 		7F2EF19D18F0905200ED4852 /* defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
 		7F2EF19E18F0A95A00ED4852 /* SquareGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareGrid.h; sourceTree = "<group>"; };
 		7F2EF19F18F0A95A00ED4852 /* SquareGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareGrid.m; sourceTree = "<group>"; };
-		7F2EF1A118F0AC8B00ED4852 /* grid.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = grid.plist; sourceTree = "<group>"; };
+		7F2EF1A318F15A5D00ED4852 /* SquareGameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SquareGameOverViewController.h; path = ../SquareGameOverViewController.h; sourceTree = "<group>"; };
+		7F2EF1A418F15A5D00ED4852 /* SquareGameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SquareGameOverViewController.m; path = ../SquareGameOverViewController.m; sourceTree = "<group>"; };
+		7F2EF1A518F15A5D00ED4852 /* SquareGameOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SquareGameOverViewController.xib; path = ../SquareGameOverViewController.xib; sourceTree = "<group>"; };
+		7F2EF1AC18F202B200ED4852 /* UIImage+UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UIImageAdditions.h"; sourceTree = "<group>"; };
+		7F2EF1AD18F202B200ED4852 /* UIImage+UIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UIImageAdditions.m"; sourceTree = "<group>"; };
+		7F2EF1B218F226C200ED4852 /* SquareGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareGameViewController.xib; sourceTree = "<group>"; };
+		7F2EF1B618F2DA5000ED4852 /* SquareIndestructible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareIndestructible.h; sourceTree = "<group>"; };
+		7F2EF1B718F2DA5000ED4852 /* SquareIndestructible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareIndestructible.m; sourceTree = "<group>"; };
+		7F2EF1B918F2E55600ED4852 /* SquareGameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareGameOver.h; sourceTree = "<group>"; };
+		7F2EF1BA18F2E55600ED4852 /* SquareGameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareGameOver.m; sourceTree = "<group>"; };
+		7F2EF1BC18F2EF7200ED4852 /* SquareResilient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareResilient.h; sourceTree = "<group>"; };
+		7F2EF1BD18F2EF7200ED4852 /* SquareResilient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareResilient.m; sourceTree = "<group>"; };
+		7F2EF1BF18F2F99600ED4852 /* SquareExponential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareExponential.h; sourceTree = "<group>"; };
+		7F2EF1C018F2F99600ED4852 /* SquareExponential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareExponential.m; sourceTree = "<group>"; };
+		7F2EF1C218F3463800ED4852 /* HAL9000-2001_A_Space_Odyssey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "HAL9000-2001_A_Space_Odyssey.jpg"; sourceTree = "<group>"; };
+		7F2EF1C318F3463800ED4852 /* square diago.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "square diago.gif"; sourceTree = "<group>"; };
+		7F2EF1C418F3463800ED4852 /* square white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square white.png"; sourceTree = "<group>"; };
+		7F2EF1C518F3463800ED4852 /* squate tiles.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "squate tiles.jpeg"; sourceTree = "<group>"; };
+		7F2EF1CB18F3693F00ED4852 /* SquareGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareGameView.h; sourceTree = "<group>"; };
+		7F2EF1CC18F3693F00ED4852 /* SquareGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareGameView.m; sourceTree = "<group>"; };
 		7F4108E818EEDC42007F8750 /* Squares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4108EB18EEDC42007F8750 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F4108ED18EEDC42007F8750 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,9 +97,8 @@
 		7F41092718EEF1EC007F8750 /* SquareMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareMenuViewController.xib; sourceTree = "<group>"; };
 		7F41092A18EEF381007F8750 /* SquareGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareGameViewController.h; sourceTree = "<group>"; };
 		7F41092B18EEF381007F8750 /* SquareGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareGameViewController.m; sourceTree = "<group>"; };
-		7F41092C18EEF381007F8750 /* SquareGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareGameViewController.xib; sourceTree = "<group>"; };
-		7F41092F18EEF847007F8750 /* SquareImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareImage.h; sourceTree = "<group>"; };
-		7F41093018EEF847007F8750 /* SquareImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareImage.m; sourceTree = "<group>"; };
+		7F41092F18EEF847007F8750 /* SquareBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareBase.h; sourceTree = "<group>"; };
+		7F41093018EEF847007F8750 /* SquareBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareBase.m; sourceTree = "<group>"; };
 		7F41093218EEFFB7007F8750 /* square-clip-art-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-clip-art-15.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,9 +127,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F2EF1A818F1BC7300ED4852 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F41092518EEF1EC007F8750 /* SquareMenuViewController.h */,
+				7F41092618EEF1EC007F8750 /* SquareMenuViewController.m */,
+				7F41092718EEF1EC007F8750 /* SquareMenuViewController.xib */,
+				7F41092A18EEF381007F8750 /* SquareGameViewController.h */,
+				7F41092B18EEF381007F8750 /* SquareGameViewController.m */,
+				7F2EF1B218F226C200ED4852 /* SquareGameViewController.xib */,
+				7F2EF1A318F15A5D00ED4852 /* SquareGameOverViewController.h */,
+				7F2EF1A418F15A5D00ED4852 /* SquareGameOverViewController.m */,
+				7F2EF1A518F15A5D00ED4852 /* SquareGameOverViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7F2EF1A918F1BCCF00ED4852 /* Squares */ = {
+			isa = PBXGroup;
+			children = (
+				7F41092F18EEF847007F8750 /* SquareBase.h */,
+				7F41093018EEF847007F8750 /* SquareBase.m */,
+				7F2EF1B618F2DA5000ED4852 /* SquareIndestructible.h */,
+				7F2EF1B718F2DA5000ED4852 /* SquareIndestructible.m */,
+				7F2EF1B918F2E55600ED4852 /* SquareGameOver.h */,
+				7F2EF1BA18F2E55600ED4852 /* SquareGameOver.m */,
+				7F2EF1BC18F2EF7200ED4852 /* SquareResilient.h */,
+				7F2EF1BD18F2EF7200ED4852 /* SquareResilient.m */,
+				7F2EF1BF18F2F99600ED4852 /* SquareExponential.h */,
+				7F2EF1C018F2F99600ED4852 /* SquareExponential.m */,
+			);
+			name = Squares;
+			sourceTree = "<group>";
+		};
+		7F2EF1AA18F1BCE400ED4852 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				7F2EF19E18F0A95A00ED4852 /* SquareGrid.h */,
+				7F2EF19F18F0A95A00ED4852 /* SquareGrid.m */,
+			);
+			name = Containers;
+			sourceTree = "<group>";
+		};
+		7F2EF1AB18F2027B00ED4852 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				7F2EF1AC18F202B200ED4852 /* UIImage+UIImageAdditions.h */,
+				7F2EF1AD18F202B200ED4852 /* UIImage+UIImageAdditions.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		7F2EF1CA18F3691300ED4852 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F2EF1CB18F3693F00ED4852 /* SquareGameView.h */,
+				7F2EF1CC18F3693F00ED4852 /* SquareGameView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		7F4108DF18EEDC42007F8750 = {
 			isa = PBXGroup;
 			children = (
+				7F2EF1C218F3463800ED4852 /* HAL9000-2001_A_Space_Odyssey.jpg */,
+				7F2EF1C318F3463800ED4852 /* square diago.gif */,
+				7F2EF1C418F3463800ED4852 /* square white.png */,
+				7F2EF1C518F3463800ED4852 /* squate tiles.jpeg */,
 				7F41093218EEFFB7007F8750 /* square-clip-art-15.png */,
 				7F4108F118EEDC42007F8750 /* Squares */,
 				7F41091018EEDC42007F8750 /* SquaresTests */,
@@ -133,22 +226,16 @@
 		7F4108F118EEDC42007F8750 /* Squares */ = {
 			isa = PBXGroup;
 			children = (
+				7F2EF1CA18F3691300ED4852 /* Views */,
+				7F2EF1AB18F2027B00ED4852 /* Additions */,
+				7F2EF1AA18F1BCE400ED4852 /* Containers */,
+				7F2EF1A918F1BCCF00ED4852 /* Squares */,
+				7F2EF1A818F1BC7300ED4852 /* Controllers */,
 				7F4108FA18EEDC42007F8750 /* SquareAppDelegate.h */,
 				7F4108FB18EEDC42007F8750 /* SquareAppDelegate.m */,
 				7F41090318EEDC42007F8750 /* Images.xcassets */,
 				7F4108F218EEDC42007F8750 /* Supporting Files */,
-				7F41092518EEF1EC007F8750 /* SquareMenuViewController.h */,
-				7F41092618EEF1EC007F8750 /* SquareMenuViewController.m */,
-				7F41092718EEF1EC007F8750 /* SquareMenuViewController.xib */,
-				7F41092A18EEF381007F8750 /* SquareGameViewController.h */,
-				7F41092B18EEF381007F8750 /* SquareGameViewController.m */,
-				7F41092C18EEF381007F8750 /* SquareGameViewController.xib */,
-				7F41092F18EEF847007F8750 /* SquareImage.h */,
-				7F41093018EEF847007F8750 /* SquareImage.m */,
 				7F2EF19D18F0905200ED4852 /* defines.h */,
-				7F2EF19E18F0A95A00ED4852 /* SquareGrid.h */,
-				7F2EF19F18F0A95A00ED4852 /* SquareGrid.m */,
-				7F2EF1A118F0AC8B00ED4852 /* grid.plist */,
 			);
 			path = Squares;
 			sourceTree = "<group>";
@@ -229,6 +316,9 @@
 				CLASSPREFIX = Square;
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
+					7F4108E718EEDC42007F8750 = {
+						DevelopmentTeam = 32KR299628;
+					};
 					7F41090818EEDC42007F8750 = {
 						TestTargetID = 7F4108E718EEDC42007F8750;
 					};
@@ -258,12 +348,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2EF1C618F3463800ED4852 /* HAL9000-2001_A_Space_Odyssey.jpg in Resources */,
+				7F2EF1C918F3463800ED4852 /* squate tiles.jpeg in Resources */,
+				7F2EF1C718F3463800ED4852 /* square diago.gif in Resources */,
+				7F2EF1C818F3463800ED4852 /* square white.png in Resources */,
 				7F41092918EEF1EC007F8750 /* SquareMenuViewController.xib in Resources */,
+				7F2EF1B318F226C200ED4852 /* SquareGameViewController.xib in Resources */,
 				7F41090418EEDC42007F8750 /* Images.xcassets in Resources */,
 				7F4108F618EEDC42007F8750 /* InfoPlist.strings in Resources */,
-				7F41092E18EEF381007F8750 /* SquareGameViewController.xib in Resources */,
-				7F2EF1A218F0AC8C00ED4852 /* grid.plist in Resources */,
 				7F41093318EEFFB7007F8750 /* square-clip-art-15.png in Resources */,
+				7F2EF1A718F15A5D00ED4852 /* SquareGameOverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,11 +377,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F4108F818EEDC42007F8750 /* main.m in Sources */,
+				7F2EF1AE18F202B200ED4852 /* UIImage+UIImageAdditions.m in Sources */,
+				7F2EF1BB18F2E55600ED4852 /* SquareGameOver.m in Sources */,
 				7F41092818EEF1EC007F8750 /* SquareMenuViewController.m in Sources */,
+				7F2EF1CD18F3693F00ED4852 /* SquareGameView.m in Sources */,
+				7F2EF1B818F2DA5000ED4852 /* SquareIndestructible.m in Sources */,
 				7F2EF1A018F0A95A00ED4852 /* SquareGrid.m in Sources */,
 				7F4108FC18EEDC42007F8750 /* SquareAppDelegate.m in Sources */,
 				7F41092D18EEF381007F8750 /* SquareGameViewController.m in Sources */,
-				7F41093118EEF847007F8750 /* SquareImage.m in Sources */,
+				7F2EF1BE18F2EF7200ED4852 /* SquareResilient.m in Sources */,
+				7F2EF1A618F15A5D00ED4852 /* SquareGameOverViewController.m in Sources */,
+				7F2EF1C118F2F99600ED4852 /* SquareExponential.m in Sources */,
+				7F41093118EEF847007F8750 /* SquareBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +446,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -361,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -383,6 +485,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -393,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -404,9 +507,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Romain Tholimet (KEQDP78NPM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squares/Squares-Prefix.pch";
 				INFOPLIST_FILE = "Squares/Squares-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,9 +523,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Romain Tholimet (32KR299628)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squares/Squares-Prefix.pch";
 				INFOPLIST_FILE = "Squares/Squares-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

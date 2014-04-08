@@ -9,13 +9,20 @@
 #import "SquareAppDelegate.h"
 #import "SquareMenuViewController.h"
 
+
 @implementation SquareAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.mainViewController = [[SquareMenuViewController alloc] initWithNibName:NSStringFromClass([SquareMenuViewController class]) bundle:nil];
+    
+    
+    UINavigationController  *navController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    
+    [navController setNavigationBarHidden:YES];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.mainViewController;
+    self.window.rootViewController = navController;
+    //self.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
     
     [self.window makeKeyAndVisible];
 
