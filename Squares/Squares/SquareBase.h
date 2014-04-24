@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    SquareBaseBlue = 0,
-    SquareBaseRed,
+    SquareBaseOrange = 0,
     SquareBaseYellow,
-    SquareBaseGreen,
+    SquareBasePane,
+    SquareBaseCyan,
     SquareBaseNone
 }SquareBaseColor;
 

@@ -19,15 +19,13 @@ typedef enum {
     SquareTypeNone
 }SquareType;
 
-@protocol SquareGridDelegate <NSObject>
-- (void)generateSquare;
-@end
-
 @interface SquareGrid : NSObject {
     NSMutableDictionary     *_squareGrid;
 }
 
 + (SquareGrid *)squareGridWithFrame:(CGRect)frame;
++ (NSString*)squareTypeEnumToString:(SquareType)enumVal;
++ (SquareType)squareTypeStringToEnum:(NSString*)strVal;
 
 - (id)initWithFrame:(CGRect)frame;
 - (NSArray *)allKeys;
@@ -41,6 +39,6 @@ typedef enum {
 - (SquareBase *)getNewSquare:(SquareType)type;
 - (SquareBase *)getSquare:(NSValue *)val;
 
-@property (strong, nonatomic) id<SquareGridDelegate> squareGridDelegate;
+@property (nonatomic, readonly) NSInteger   squareNumber;
 
 @end

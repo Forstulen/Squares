@@ -7,15 +7,17 @@
 //
 
 #import "UIImage+UIImageAdditions.h"
+#import "SquareExplosion.h"
 #import "SquareBase.h"
 #import "SquareGrid.h"
 #import "defines.h"
 
 NSString * const squareColorArray[] = {
-    @"Blue",
-    @"Red",
-    @"Yellow",
-    @"Green"
+    @"SquareBaseOrange",
+    @"SquareBaseYellow",
+    @"SquareBasePane",
+    @"SquareBaseCyan",
+    @"SquareBaseNone"
 };
 
 @implementation SquareBase
@@ -59,16 +61,16 @@ NSString * const squareColorArray[] = {
 
 - (UIColor *)getUIColor:(SquareBaseColor)color {
     switch (color) {
-        case SquareBaseBlue:
-            return SQUARE_COLOR_BLUE;
-        case SquareBaseGreen:
-            return SQUARE_COLOR_GREEN;
-        case SquareBaseRed:
-            return SQUARE_COLOR_RED;
+        case SquareBaseOrange:
+            return SQUARE_COLOR_ORANGE;
         case SquareBaseYellow:
             return SQUARE_COLOR_YELLOW;
+        case SquareBasePane:
+            return SQUARE_COLOR_PANE;
+        case SquareBaseCyan:
+            return SQUARE_COLOR_CYAN;
         default:
-            return SQUARE_COLOR_BLUE;
+            return SQUARE_COLOR_CYAN;
     }
 }
 
@@ -100,6 +102,11 @@ NSString * const squareColorArray[] = {
 
 - (void)unPauseAnimation {
     self.layer.speed = 1.0;
+    CFTimeInterval pausedTime = self.layer.timeOffset;
+    self.layer.timeOffset = 0.0;
+    self.layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [self.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    self.layer.beginTime = timeSincePause;
 }
 
 - (void)endAnimation {
@@ -122,10 +129,15 @@ NSString * const squareColorArray[] = {
 - (void)doAction {
     --self.squareTouches;
     if (self.squareTouches == 0) {
-        [_squareGrid removeSquare:self];
-        
-        [self removeFromSuperview];
         [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_DESTROYED object:self];
+        
+        SquareExplosion *explosion = [[SquareExplosion alloc] initWithFrame:((CALayer*)self.layer.presentationLayer).frame];
+        
+        [self.superview addSubview:explosion];
+        [explosion startExplosion:((CALayer*)self.layer.presentationLayer).frame withColor:[self getUIColor:self.squareColor]];
+        
+        [_squareGrid removeSquare:self];
+        [self removeFromSuperview];
     }
 }
 

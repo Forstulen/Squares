@@ -26,7 +26,8 @@
         self.squareScalingDelay = SQUARE_RESILIENT_DELAY;
         self.squareScore = SQUARE_RESILIENT_SCORE;
         self.squareTouches = SQUARE_RESILIENT_TOUCHES_NUMBER;
-        self.image = [UIImage imageNamed:SQUARE_IMAGE_RESILIENT withColor:[self getUIColor:self.squareColor]];
+        _squareResilientStep = 1;
+        self.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@%d.png", SQUARE_IMAGE_RESILIENT, _squareResilientStep] withColor:[self getUIColor:self.squareColor]];
     }
     return self;
 }
@@ -42,9 +43,16 @@
                          self.layer.transform = layerTransform;
                      }
      
-                     completion:^(BOOL finished) {
-                         [_squareGrid removeSquare:self];
-                     }];
+                     completion:nil];
 }
+
+- (void)doAction {
+    [super doAction];
+    if (self.squareTouches > 0) {
+        ++_squareResilientStep;
+        self.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@%d.png", SQUARE_IMAGE_RESILIENT, _squareResilientStep] withColor:[self getUIColor:self.squareColor]];
+    }
+}
+
 
 @end

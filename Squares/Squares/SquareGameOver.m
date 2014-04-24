@@ -43,7 +43,6 @@
                      }
      
                      completion:^(BOOL finished) {
-                         NSLog(@"Beg anim");
                          [_squareGrid removeSquare:self];
                      }];
 }

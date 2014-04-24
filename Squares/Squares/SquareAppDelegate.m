@@ -18,7 +18,7 @@
     
     
     UINavigationController  *navController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
-    
+
     [navController setNavigationBarHidden:YES];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = navController;

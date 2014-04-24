@@ -14,10 +14,38 @@
 #import "SquareExponential.h"
 #import "defines.h"
 
+NSString * const squareTypeArray[] = {
+    @"SquareTypeBase",
+    @"SquareTypeIndestructible",
+    @"SquareTypeGameOver",
+    @"SquareTypeResilient",
+    @"SquareTypeExponential",
+    @"SquareTypeNone"
+};
+
 @implementation SquareGrid
 
 + (SquareGrid *)squareGridWithFrame:(CGRect)frame {
     return [[SquareGrid alloc] initWithFrame:frame];
+}
+
++ (NSString*)squareTypeEnumToString:(SquareType)enumVal
+{
+    return squareTypeArray[enumVal];
+}
+
++ (SquareType)squareTypeStringToEnum:(NSString*)strVal
+{
+    int retVal;
+    for(int i = 0; i < sizeof(squareTypeArray) - 1; i++)
+    {
+        if([(NSString*)squareTypeArray[i] isEqual:strVal])
+        {
+            retVal = i;
+            break;
+        }
+    }
+    return (SquareType)retVal;
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -73,6 +101,7 @@
     for (NSValue *val in [self allKeys]) {
         [_squareGrid setObject:[NSNull null] forKey:val];
     }
+    _squareNumber = 0;
 }
 
 - (void)activateSquareAction:(SquareBase *)square {
@@ -83,8 +112,10 @@
     NSArray *keys = [_squareGrid allKeysForObject:square];
     
     [square removeFromSuperview];
-    if (keys.count)
+    if (keys.count) {
         [_squareGrid setObject:[NSNull null] forKey:keys[0]];
+        --_squareNumber;
+    }
 }
 
 - (CGPoint)getRandomValueFromPoint:(CGPoint)point {
@@ -140,6 +171,7 @@
                 SquareBase *square = [self getSquareWithType:type withPoint:point];
 
                 [_squareGrid setObject:square forKey:val];
+                ++_squareNumber;
                 return square;
             }
         }

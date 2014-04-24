@@ -8,33 +8,34 @@
 
 #import <UIKit/UIKit.h>
 #import "SquareGameOverViewController.h"
+#import "SquareLevels.h"
 #import "SquareBase.h"
 #import "SquareGrid.h"
 
-@interface SquareGameViewController : UIViewController <SquareGameOvertDelegate, SquareGridDelegate> {
+@interface SquareGameViewController : UIViewController <SquareGameOvertDelegate> {
     SquareGrid      *_squareGrid;
     SquareGameOverViewController *_squareGameOverViewController;
-    CFTimeInterval  _squareSavedTime;
     CADisplayLink   *_squareGameLoop;
     BOOL            _squareGridEnabled;
     
-    NSUInteger      _squareScore;
-    NSUInteger      _squareBonusMultiplier;
-    NSUInteger      _squareColorChain;
-    SquareBaseColor _squareLastColor;
+    CFTimeInterval  _squareElapsedTime;
+    CFTimeInterval  _squareLastSpawnTime;
+    CFTimeInterval  _squareLastActivityTime;
+    CFTimeInterval  _squareLastLevelTime;
+    CFTimeInterval  _squareLastRefreshTime;
     
+    CGPoint         _squareLastPositionKnow;
 }
 
-- (void)addSquare;
-- (void)generateSquare;
-- (void)activateSquareAction:(CGPoint)point;
-- (void)checkCollisions;
+- (void)configureGameMode:(SquareGameType)type;
 - (void)restartGame;
 - (void)quitGame;
-- (void)gameOver;
 
 @property (weak, nonatomic) IBOutlet UIView *GameBoard;
 @property (weak, nonatomic) IBOutlet UILabel *Score;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UILabel *squareMultiplier;
+@property (weak, nonatomic) IBOutlet UILabel *squarePauseLabel;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *squarePauseButton;
 
 @end

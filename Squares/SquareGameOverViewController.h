@@ -19,6 +19,14 @@
 - (void)dismissAnimatedGameOverView:(UIView *)parent withCompletion:(void (^)(BOOL))block;
 
 @property (strong, nonatomic) id<SquareGameOvertDelegate> squareGameOverViewDelegate;
+
+@property (weak, nonatomic) IBOutlet UILabel *squareTitle;
 @property (weak, nonatomic) IBOutlet UILabel *squareScore;
+@property (weak, nonatomic) IBOutlet UILabel *squareBestScoreTitle;
+@property (weak, nonatomic) IBOutlet UILabel *squareBestScore;
+
+@property (weak, nonatomic) IBOutlet UIButton *squareFacebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *squareTryAgainButton;
+@property (weak, nonatomic) IBOutlet UIButton *squareQuitButton;
 
 @end
