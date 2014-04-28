@@ -17,7 +17,7 @@
 
 @implementation SquareScoreManager
 
-+ (id)sharedSquareScoreManager {
++ (SquareScoreManager *)sharedSquareScoreManager {
     static SquareScoreManager *shared = nil;
     @synchronized(self) {
         if (shared == nil)
@@ -55,23 +55,30 @@
     SquareBase  *square = notification.object;
     
     ++_squareChain;
-    if ((sqrt(_squareChain) - floor(sqrt(_squareChain))) == 0) {
+    if (_squareBonusMultiplier < SQUARE_MULTIPLIER_MAX && (sqrt(_squareChain) - floor(sqrt(_squareChain))) == 0) {
         ++_squareBonusMultiplier;
         
         if (_squareBonusMultiplier > 1) {
             [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_MULTIPLIER object:[NSNumber numberWithInteger:_squareBonusMultiplier]];
         }
     }
-    if (_squareBonusMultiplier)
+    
+    if (_squareScore > SQUARE_SCORE_MAX) {
+        _squareScore = SQUARE_SCORE_MAX;
+        [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_BEST_SCORE_EVER object:nil userInfo:nil];
+    }
+    else if (_squareBonusMultiplier)
         _squareScore += square.squareScore * _squareBonusMultiplier;
     else
         _squareScore += square.squareScore;
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_UPDATE_SCORE object:nil userInfo:nil];
+    
     if (_squareScore > _squareBestScoreHardCore && _squareGameType == SquareLevelsHardcore) {
-        self.squareBestScoreHardCore = _squareScore;
+        _squareBestScoreHardCore = _squareScore;
     }
     if (_squareScore > _squareBestScoreTraining && _squareGameType == SquareLevelsPlay) {
-        self.squareBestScoreTraining = _squareScore;
+        _squareBestScoreTraining = _squareScore;
     }
 }
 
@@ -93,12 +100,12 @@
     
     _squareBestScoreTraining = 0;
     if ([defaults integerForKey:SQUARE_BEST_SCORE_TRAINING]) {
-        self.squareBestScoreTraining = [defaults integerForKey:SQUARE_BEST_SCORE_TRAINING];
+        _squareBestScoreTraining = [defaults integerForKey:SQUARE_BEST_SCORE_TRAINING];
     }
     
     _squareBestScoreHardCore = 0;
     if ([defaults integerForKey:SQUARE_BEST_SCORE_HARDCORE]) {
-        self.squareBestScoreHardCore = [defaults integerForKey:SQUARE_BEST_SCORE_HARDCORE];
+        _squareBestScoreHardCore = [defaults integerForKey:SQUARE_BEST_SCORE_HARDCORE];
     }
 }
 

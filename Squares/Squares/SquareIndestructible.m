@@ -44,6 +44,8 @@
      
                      completion:^(BOOL finished) {
                          [_squareGrid removeSquare:self];
+                         [self.layer removeAllAnimations];
+                         [self removeFromSuperview];
                      }];
 }
 

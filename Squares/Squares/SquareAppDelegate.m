@@ -7,7 +7,9 @@
 //
 
 #import "SquareAppDelegate.h"
+#import "SquareScoreManager.h"
 #import "SquareMenuViewController.h"
+#import "defines.h"
 
 
 @implementation SquareAppDelegate
@@ -22,7 +24,6 @@
     [navController setNavigationBarHidden:YES];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = navController;
-    //self.window.rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
     
     [self.window makeKeyAndVisible];
 
@@ -37,8 +38,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_PAUSE object:nil userInfo:nil];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -53,7 +53,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[SquareScoreManager sharedSquareScoreManager] saveBestScore];
 }
 
 @end

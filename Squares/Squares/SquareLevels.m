@@ -33,7 +33,7 @@
         NSString *plist = [[NSBundle mainBundle] pathForResource:SQUARE_LEVELS_PLIST ofType:@"plist"];
         NSDictionary *gameType = [[NSDictionary alloc] initWithContentsOfFile:plist];
         
-        _squareLevelsPlay = [gameType safeObjectForKey:SQUARE_LEVELS_PLAY];
+        _squareLevelsPlay = [gameType safeObjectForKey:SQUARE_LEVELS_TRAINING];
         _squareLevelsHardcore = [gameType safeObjectForKey:SQUARE_LEVELS_HARDCORE];
         _squareGameType = SquareLevelsPlay;
         [self setGameType:_squareGameType];

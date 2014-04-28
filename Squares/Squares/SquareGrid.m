@@ -14,7 +14,7 @@
 #import "SquareExponential.h"
 #import "defines.h"
 
-NSString * const squareTypeArray[] = {
+static NSString * const squareTypeArray[] = {
     @"SquareTypeBase",
     @"SquareTypeIndestructible",
     @"SquareTypeGameOver",
@@ -151,7 +151,7 @@ NSString * const squareTypeArray[] = {
         case SquareTypeGameOver:
             return [SquareGameOver squareGameOverWithPosition:point withGrid:self];
         case SquareTypeResilient:
-            return [SquareResilient squareResilientWithPosition:point withGrid:self];
+            return [SquareResilient squareResilientWithPosition:point withGrid:self];           
         case SquareTypeExponential:
             return [SquareExponential squareExponentialWithPosition:point withGrid:self];
         default:

@@ -12,9 +12,14 @@
 #import "SquareBase.h"
 #import "SquareGrid.h"
 
+@class  SquareParticlesEmitter;
+
 @interface SquareGameViewController : UIViewController <SquareGameOvertDelegate> {
     SquareGrid      *_squareGrid;
+    SquareGameType  _squareGameType;
     SquareGameOverViewController *_squareGameOverViewController;
+    SquareParticlesEmitter  *_squareParticlesEmitter;
+    
     CADisplayLink   *_squareGameLoop;
     BOOL            _squareGridEnabled;
     
@@ -23,6 +28,8 @@
     CFTimeInterval  _squareLastActivityTime;
     CFTimeInterval  _squareLastLevelTime;
     CFTimeInterval  _squareLastRefreshTime;
+    CFTimeInterval  _squarePauseTime;
+    CFTimeInterval  _squareLastBackGroundLinesTime;
     
     CGPoint         _squareLastPositionKnow;
 }

@@ -16,16 +16,17 @@
     SquareGameType  _squareGameType;
 }
 
-+ (id)sharedSquareScoreManager;
++ (SquareScoreManager *)sharedSquareScoreManager;
 
 - (void)resetScore;
 - (void)resetMultiplier;
 - (void)setGameType:(SquareGameType)type;
+- (void)saveBestScore;
 - (NSUInteger)getCorrespondingBestScore;
 
 @property (nonatomic, readonly) NSUInteger squareScore;
-@property (nonatomic) NSUInteger squareBonusMultiplier;
-@property (nonatomic) NSUInteger squareBestScoreTraining;
-@property (nonatomic) NSUInteger squareBestScoreHardCore;
+@property (nonatomic, readonly) NSUInteger squareBonusMultiplier;
+@property (nonatomic, readonly) NSUInteger squareBestScoreTraining;
+@property (nonatomic, readonly) NSUInteger squareBestScoreHardCore;
 
 @end

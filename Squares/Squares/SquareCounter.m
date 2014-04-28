@@ -23,8 +23,9 @@
         _squareCounterLabel.textAlignment = NSTextAlignmentCenter;
         
         [parent addSubview:self];
+        self.userInteractionEnabled = YES;
         [self addSubview:_squareCounterLabel];
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor clearColor];
         self.alpha = 0.7;
     }
     return self;
@@ -33,8 +34,10 @@
 - (void)startCounter:(NSUInteger)counter {
     _squareCounterLoop = [CADisplayLink displayLinkWithTarget:self
                                                   selector:@selector(update:)];
+    [_squareCounterLoop setFrameInterval:SQUARE_FRAME_INTERVAL];
     [_squareCounterLoop addToRunLoop:[NSRunLoop mainRunLoop]
                           forMode:NSRunLoopCommonModes];
+    
     _squareCounter = counter;
     _squareCounterLabel.text = [NSString stringWithFormat:@"%d", _squareCounter];
     _squareElapsedTime = CACurrentMediaTime();
@@ -43,14 +46,15 @@
 - (void)update:(CADisplayLink*)displayLink {
     CGFloat elapsedTime = CACurrentMediaTime() - _squareElapsedTime;
     
-    _squareCounterLabel.text = [NSString stringWithFormat:@"%d", _squareCounter];
     if (elapsedTime >= 1.0) {
         --_squareCounter;
+        _squareCounterLabel.text = [NSString stringWithFormat:@"%d", _squareCounter];
         _squareElapsedTime = CACurrentMediaTime();
     }
     
     if (_squareCounter == 0) {
         [_squareCounterLoop removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+        [_squareCounterLabel removeFromSuperview];
         [self removeFromSuperview];
     }
 }

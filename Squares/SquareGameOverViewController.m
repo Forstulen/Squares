@@ -10,6 +10,7 @@
 #import "SquareGameOverViewController.h"
 #import "SquareSocialController.h"
 #import "SquareScoreManager.h"
+#import "SquareSoundManager.h"
 #import "defines.h"
 
 @interface SquareGameOverViewController ()
@@ -30,10 +31,11 @@
 {
     [super viewDidLoad];
 
-    self.squareTitle.font = SQUARE_FONT_HUGE;
+    self.squareTitle.font = SQUARE_FONT_MEDIUM;
     self.squareScore.font = SQUARE_FONT_BIG;
     self.squareBestScoreTitle.font = SQUARE_FONT_MEDIUM;
     self.squareBestScore.font = SQUARE_FONT_BIG;
+    
     
     [self.squareFacebookButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_CYAN] forState:UIControlStateNormal];
     self.squareFacebookButton.titleLabel.font = SQUARE_FONT_MEDIUM;
@@ -54,15 +56,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
 - (IBAction)postScoreOnFacebook:(id)sender {
+    [[SquareSoundManager sharedSquareSoundManager] playSound:SQUARE_SOUND_CLICK];
     SquareLevelsManager *levelsManager = [SquareLevelsManager sharedSquareLevelsManager];
     
     [[SquareSocialController sharedSquareSocialController] postOnFacebook:levelsManager.squareGameType withScore:self.squareScore.text.integerValue];
 }
 
 - (IBAction)restartGame:(id)sender {
+    [[SquareSoundManager sharedSquareSoundManager] playSound:SQUARE_SOUND_CLICK];
     [self dismissAnimatedGameOverView:self.view.superview withCompletion:^(BOOL finished) {
         [self.view removeFromSuperview];
         if (self.squareGameOverViewDelegate)
@@ -71,6 +73,7 @@
 }
 
 - (IBAction)quitGame:(id)sender {
+    [[SquareSoundManager sharedSquareSoundManager] playSound:SQUARE_SOUND_CLICK];
     [self dismissAnimatedGameOverView:self.view.superview withCompletion:^(BOOL finished) {
         [self.view removeFromSuperview];
         if (self.squareGameOverViewDelegate)
@@ -84,7 +87,7 @@
     self.view.frame = CGRectMake(0, viewHeight, parent.frame.size.width, parent.frame.size.height);
     [parent addSubview:self.view];
 
-    SquareScoreManager *scoreManager =[SquareScoreManager sharedSquareScoreManager];
+    SquareScoreManager *scoreManager = [SquareScoreManager sharedSquareScoreManager];
     
     self.squareScore.text = [NSString stringWithFormat:@"%lu", (unsigned long)scoreManager.squareScore];
     self.squareBestScore.text = [NSString stringWithFormat:@"%lu", (unsigned long)[scoreManager getCorrespondingBestScore]];

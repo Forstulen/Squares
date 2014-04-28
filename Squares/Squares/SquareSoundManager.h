@@ -24,4 +24,11 @@
 - (void)stop;
 - (void)stopBgMusic;
 
+- (void)setEffectsLevel:(CGFloat)level;
+- (void)setMusicLevel:(CGFloat)level;
+
+@property (nonatomic, readonly) CGFloat effectsLevel;
+@property (nonatomic, readonly) CGFloat musicLevel;
+@property (nonatomic, readonly) BOOL isPlaying;
+
 @end

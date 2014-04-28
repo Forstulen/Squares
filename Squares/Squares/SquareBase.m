@@ -8,11 +8,12 @@
 
 #import "UIImage+UIImageAdditions.h"
 #import "SquareExplosion.h"
+#import "SquareSoundManager.h"
 #import "SquareBase.h"
 #import "SquareGrid.h"
 #import "defines.h"
 
-NSString * const squareColorArray[] = {
+static NSString * const squareColorArray[] = {
     @"SquareBaseOrange",
     @"SquareBaseYellow",
     @"SquareBasePane",
@@ -43,6 +44,21 @@ NSString * const squareColorArray[] = {
         }
     }
     return (SquareBaseColor)retVal;
+}
+
++ (UIColor*)randomColor {
+    switch (arc4random() % 4) {
+        case SquareBaseOrange:
+            return SQUARE_COLOR_ORANGE;
+        case SquareBaseYellow:
+            return SQUARE_COLOR_YELLOW;
+        case SquareBasePane:
+            return SQUARE_COLOR_PANE;
+        case SquareBaseCyan:
+            return SQUARE_COLOR_CYAN;
+        default:
+            return SQUARE_COLOR_CYAN;
+    }
 }
 
 - (id)initWithPoint:(CGPoint)point withGrid:(SquareGrid *)grid {
@@ -131,12 +147,14 @@ NSString * const squareColorArray[] = {
     if (self.squareTouches == 0) {
         [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_DESTROYED object:self];
         
+        [[SquareSoundManager sharedSquareSoundManager] playSound:SQUARE_SOUND_EXPLOSION];
         SquareExplosion *explosion = [[SquareExplosion alloc] initWithFrame:((CALayer*)self.layer.presentationLayer).frame];
         
         [self.superview addSubview:explosion];
         [explosion startExplosion:((CALayer*)self.layer.presentationLayer).frame withColor:[self getUIColor:self.squareColor]];
         
         [_squareGrid removeSquare:self];
+        [self.layer removeAllAnimations];
         [self removeFromSuperview];
     }
 }

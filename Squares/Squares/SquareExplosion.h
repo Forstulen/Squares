@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface SquareExplosion : UIView {
-    CAEmitterLayer  *_squareExplosionEmitter;
+
 }
 
 - (void)startExplosion:(CGRect)frame withColor:(UIColor *)color;

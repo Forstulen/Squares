@@ -60,4 +60,16 @@
     [[OALSimpleAudio sharedInstance] stopEverything];
 }
 
+- (void)setEffectsLevel:(CGFloat)level {
+    [[OALSimpleAudio sharedInstance] setEffectsVolume:level];
+}
+
+- (void)setMusicLevel:(CGFloat)level {
+    [[OALSimpleAudio sharedInstance] setBgVolume:level];
+}
+
+- (BOOL)isPlaying {
+    return [[OALSimpleAudio sharedInstance] bgPlaying];
+}
+
 @end

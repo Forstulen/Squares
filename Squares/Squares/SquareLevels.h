@@ -30,6 +30,7 @@ typedef enum {
 @property (nonatomic, readonly) SquareGameType      squareGameType;
 @property (nonatomic, readonly) CGFloat             squareRefreshDelay;
 @property (nonatomic, readonly) CGFloat             squareSpawnDelay;
+@property (nonatomic, readonly) NSUInteger          squareCurrentIndex;
 @property (nonatomic, readonly) BOOL                squareRespawn;
 @property (nonatomic, readonly) CGFloat             squareNextLevel;
 @property (nonatomic, readonly) CGFloat             squareSquareNumber;

@@ -12,7 +12,7 @@
     UILabel     *_squareMultplierLabel;
 }
 
-+ (SquareMultiplier *)squareMultiplierWithParent:(UIView *)parent withNumber:(NSUInteger)number withPosition:(CGPoint)position;
++ (SquareMultiplier *)squareMultiplierWithParent:(UIView *)parent withMessage:(NSString *)message withPosition:(CGPoint)position;
 
 
 @end

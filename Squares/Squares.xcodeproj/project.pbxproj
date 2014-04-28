@@ -94,6 +94,14 @@
 		7F41092918EEF1EC007F8750 /* SquareMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F41092718EEF1EC007F8750 /* SquareMenuViewController.xib */; };
 		7F41092D18EEF381007F8750 /* SquareGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41092B18EEF381007F8750 /* SquareGameViewController.m */; };
 		7F41093118EEF847007F8750 /* SquareBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41093018EEF847007F8750 /* SquareBase.m */; };
+		7FAC4851190D7E3700CC4227 /* SquareCrossedLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC4850190D7E3700CC4227 /* SquareCrossedLines.m */; };
+		7FAED710190B069500ABF9DB /* Ambient BG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70A190B069500ABF9DB /* Ambient BG.m4a */; };
+		7FAED711190B069500ABF9DB /* Explosion.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70B190B069500ABF9DB /* Explosion.m4a */; };
+		7FAED712190B069500ABF9DB /* GameOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70C190B069500ABF9DB /* GameOver.m4a */; };
+		7FAED713190B069500ABF9DB /* Multiplier.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70D190B069500ABF9DB /* Multiplier.m4a */; };
+		7FAED714190B069500ABF9DB /* Music IG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70E190B069500ABF9DB /* Music IG.m4a */; };
+		7FAED715190B069500ABF9DB /* UI Sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70F190B069500ABF9DB /* UI Sound.m4a */; };
+		7FAED71B190C649700ABF9DB /* SquareParticlesEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAED71A190C649700ABF9DB /* SquareParticlesEmitter.m */; };
 		7FAFCC5218F4C82700E5EEFD /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAFCC3C18F4C82700E5EEFD /* Background.png */; };
 		7FAFCC5318F4C82700E5EEFD /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAFCC3D18F4C82700E5EEFD /* Background@2x.png */; };
 		7FB96A5B18F6094500781FA3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB96A5A18F6094500781FA3 /* Social.framework */; };
@@ -112,6 +120,9 @@
 		7FBDD4B619081A3C0098594F /* squares_logo_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD4A019081A3C0098594F /* squares_logo_1024.png */; };
 		7FBDD4B719081A3C0098594F /* squares_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD4A119081A3C0098594F /* squares_logo.png */; };
 		7FBDD4B819081A3C0098594F /* squares_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD4A219081A3C0098594F /* squares_logo@2x.png */; };
+		7FC20D4B1909C39900B041CD /* SquareIndicatorLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D4A1909C39900B041CD /* SquareIndicatorLevel.m */; };
+		7FC20D59190A5F5900B041CD /* SquareOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D57190A5F5900B041CD /* SquareOptionsViewController.m */; };
+		7FC20D5A190A5F5900B041CD /* SquareOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC20D58190A5F5900B041CD /* SquareOptionsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +297,21 @@
 		7F41092B18EEF381007F8750 /* SquareGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareGameViewController.m; sourceTree = "<group>"; };
 		7F41092F18EEF847007F8750 /* SquareBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareBase.h; sourceTree = "<group>"; };
 		7F41093018EEF847007F8750 /* SquareBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareBase.m; sourceTree = "<group>"; };
+		7FAC484F190D7E3700CC4227 /* SquareCrossedLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareCrossedLines.h; sourceTree = "<group>"; };
+		7FAC4850190D7E3700CC4227 /* SquareCrossedLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareCrossedLines.m; sourceTree = "<group>"; };
+		7FAE3D1E1909B3C40095321D /* Ambient sound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "Ambient sound.aiff"; sourceTree = "<group>"; };
+		7FAE3D1F1909B3C40095321D /* Explosion.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Explosion.aiff; sourceTree = "<group>"; };
+		7FAE3D201909B3C40095321D /* GameOver.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = GameOver.aiff; sourceTree = "<group>"; };
+		7FAE3D211909B3C40095321D /* Multiplier.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Multiplier.aiff; sourceTree = "<group>"; };
+		7FAE3D221909B3C40095321D /* UI Sound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "UI Sound.aiff"; sourceTree = "<group>"; };
+		7FAED70A190B069500ABF9DB /* Ambient BG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ambient BG.m4a"; sourceTree = "<group>"; };
+		7FAED70B190B069500ABF9DB /* Explosion.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Explosion.m4a; sourceTree = "<group>"; };
+		7FAED70C190B069500ABF9DB /* GameOver.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameOver.m4a; sourceTree = "<group>"; };
+		7FAED70D190B069500ABF9DB /* Multiplier.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Multiplier.m4a; sourceTree = "<group>"; };
+		7FAED70E190B069500ABF9DB /* Music IG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Music IG.m4a"; sourceTree = "<group>"; };
+		7FAED70F190B069500ABF9DB /* UI Sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UI Sound.m4a"; sourceTree = "<group>"; };
+		7FAED719190C649600ABF9DB /* SquareParticlesEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareParticlesEmitter.h; sourceTree = "<group>"; };
+		7FAED71A190C649700ABF9DB /* SquareParticlesEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareParticlesEmitter.m; sourceTree = "<group>"; };
 		7FAFCC3C18F4C82700E5EEFD /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		7FAFCC3D18F4C82700E5EEFD /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
 		7FAFCC4218F4C82700E5EEFD /* Square.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Square.ttf; sourceTree = "<group>"; };
@@ -313,6 +339,11 @@
 		7FBDD4A019081A3C0098594F /* squares_logo_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squares_logo_1024.png; sourceTree = "<group>"; };
 		7FBDD4A119081A3C0098594F /* squares_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squares_logo.png; sourceTree = "<group>"; };
 		7FBDD4A219081A3C0098594F /* squares_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo@2x.png"; sourceTree = "<group>"; };
+		7FC20D491909C39900B041CD /* SquareIndicatorLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareIndicatorLevel.h; sourceTree = "<group>"; };
+		7FC20D4A1909C39900B041CD /* SquareIndicatorLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareIndicatorLevel.m; sourceTree = "<group>"; };
+		7FC20D56190A5F5900B041CD /* SquareOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareOptionsViewController.h; sourceTree = "<group>"; };
+		7FC20D57190A5F5900B041CD /* SquareOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareOptionsViewController.m; sourceTree = "<group>"; };
+		7FC20D58190A5F5900B041CD /* SquareOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareOptionsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +533,17 @@
 		7F1D66D819091E4300BA43C9 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				7FAED70A190B069500ABF9DB /* Ambient BG.m4a */,
+				7FAED70B190B069500ABF9DB /* Explosion.m4a */,
+				7FAED70C190B069500ABF9DB /* GameOver.m4a */,
+				7FAED70D190B069500ABF9DB /* Multiplier.m4a */,
+				7FAED70E190B069500ABF9DB /* Music IG.m4a */,
+				7FAED70F190B069500ABF9DB /* UI Sound.m4a */,
+				7FAE3D1E1909B3C40095321D /* Ambient sound.aiff */,
+				7FAE3D1F1909B3C40095321D /* Explosion.aiff */,
+				7FAE3D201909B3C40095321D /* GameOver.aiff */,
+				7FAE3D211909B3C40095321D /* Multiplier.aiff */,
+				7FAE3D221909B3C40095321D /* UI Sound.aiff */,
 				7F1D66D919091E5000BA43C9 /* ClickButton.m4a */,
 			);
 			name = Audio;
@@ -525,6 +567,9 @@
 				7FB96A5F18F60D3200781FA3 /* SquareSocialController.m */,
 				7F1D66D51909123800BA43C9 /* SquareSoundManager.h */,
 				7F1D66D61909123800BA43C9 /* SquareSoundManager.m */,
+				7FC20D56190A5F5900B041CD /* SquareOptionsViewController.h */,
+				7FC20D57190A5F5900B041CD /* SquareOptionsViewController.m */,
+				7FC20D58190A5F5900B041CD /* SquareOptionsViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -581,6 +626,12 @@
 				7F1D66E019092AF500BA43C9 /* SquareExplosion.m */,
 				7F1D66E619095FDA00BA43C9 /* SquareMultiplier.h */,
 				7F1D66E719095FDB00BA43C9 /* SquareMultiplier.m */,
+				7FC20D491909C39900B041CD /* SquareIndicatorLevel.h */,
+				7FC20D4A1909C39900B041CD /* SquareIndicatorLevel.m */,
+				7FAED719190C649600ABF9DB /* SquareParticlesEmitter.h */,
+				7FAED71A190C649700ABF9DB /* SquareParticlesEmitter.m */,
+				7FAC484F190D7E3700CC4227 /* SquareCrossedLines.h */,
+				7FAC4850190D7E3700CC4227 /* SquareCrossedLines.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -827,6 +878,7 @@
 				7F35990919088C5000AA4C30 /* Square Resilient1.png in Resources */,
 				7F1D66A819090DAD00BA43C9 /* ObjectAL-Overview1.svg in Resources */,
 				7F35990A19088C5000AA4C30 /* Square Resilient2.png in Resources */,
+				7FAED714190B069500ABF9DB /* Music IG.m4a in Resources */,
 				7F1D66E31909423F00BA43C9 /* particle_base-48x48.jpg in Resources */,
 				7F1D66AC19090DAD00BA43C9 /* LICENSE.ObjectAL.txt in Resources */,
 				7F35990B19088C5000AA4C30 /* Square Resilient3.png in Resources */,
@@ -843,12 +895,16 @@
 				7FBDD4B619081A3C0098594F /* squares_logo_1024.png in Resources */,
 				7F2EF1CF18F3FC9700ED4852 /* Levels.plist in Resources */,
 				7FBDD4AC19081A3C0098594F /* Splash iphone5@2x.png in Resources */,
+				7FAED713190B069500ABF9DB /* Multiplier.m4a in Resources */,
 				7F41092918EEF1EC007F8750 /* SquareMenuViewController.xib in Resources */,
 				7F2EF1B318F226C200ED4852 /* SquareGameViewController.xib in Resources */,
 				7FAFCC5218F4C82700E5EEFD /* Background.png in Resources */,
+				7FC20D5A190A5F5900B041CD /* SquareOptionsViewController.xib in Resources */,
 				7F41090418EEDC42007F8750 /* Images.xcassets in Resources */,
+				7FAED711190B069500ABF9DB /* Explosion.m4a in Resources */,
 				7FBDD4AD19081A3C0098594F /* Splash.png in Resources */,
 				7F35990619086E2E00AA4C30 /* Square Exponential.png in Resources */,
+				7FAED710190B069500ABF9DB /* Ambient BG.m4a in Resources */,
 				7FBDD4AE19081A3C0098594F /* Splash@2x.png in Resources */,
 				7F1D66C819090DAD00BA43C9 /* ObjectAL (OSX)-Info.plist in Resources */,
 				7FBDD4A419081A3C0098594F /* Button large@2x.png in Resources */,
@@ -858,12 +914,14 @@
 				7F1D66A519090DAD00BA43C9 /* build_docs.sh in Resources */,
 				7FBDD4A519081A3C0098594F /* Button small.png in Resources */,
 				7F4108F618EEDC42007F8750 /* InfoPlist.strings in Resources */,
+				7FAED715190B069500ABF9DB /* UI Sound.m4a in Resources */,
 				7F1D66A719090DAD00BA43C9 /* ObjectAL-Overview1.png in Resources */,
 				7FAFCC5318F4C82700E5EEFD /* Background@2x.png in Resources */,
 				7F1D66E5190952CB00BA43C9 /* ParticleSmoke.png in Resources */,
 				7F1D66AB19090DAD00BA43C9 /* ObjectAL-Overview2.svg in Resources */,
 				7F2EF1A718F15A5D00ED4852 /* SquareGameOverViewController.xib in Resources */,
 				7FBDD4A619081A3C0098594F /* Button small@2x.png in Resources */,
+				7FAED712190B069500ABF9DB /* GameOver.m4a in Resources */,
 				7FBDD4AB19081A3C0098594F /* Splash iphone5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -883,7 +941,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAED71B190C649700ABF9DB /* SquareParticlesEmitter.m in Sources */,
 				7F4108F818EEDC42007F8750 /* main.m in Sources */,
+				7FAC4851190D7E3700CC4227 /* SquareCrossedLines.m in Sources */,
 				7F2EF1AE18F202B200ED4852 /* UIImage+UIImageAdditions.m in Sources */,
 				7F1D66B819090DAD00BA43C9 /* ALContext.m in Sources */,
 				7F2EF1BB18F2E55600ED4852 /* SquareGameOver.m in Sources */,
@@ -895,7 +955,9 @@
 				7F41092818EEF1EC007F8750 /* SquareMenuViewController.m in Sources */,
 				7F1D66B319090DAD00BA43C9 /* OALAudioTracks.m in Sources */,
 				7F2EF1CD18F3693F00ED4852 /* SquareGameView.m in Sources */,
+				7FC20D59190A5F5900B041CD /* SquareOptionsViewController.m in Sources */,
 				7F1D66C519090DAD00BA43C9 /* OALAudioFile.m in Sources */,
+				7FC20D4B1909C39900B041CD /* SquareIndicatorLevel.m in Sources */,
 				7F2B13C719096DFD00745282 /* SquareDemo.m in Sources */,
 				7F2EF1B818F2DA5000ED4852 /* SquareIndestructible.m in Sources */,
 				7F2EF1D818F42E6900ED4852 /* SquareScoreManager.m in Sources */,

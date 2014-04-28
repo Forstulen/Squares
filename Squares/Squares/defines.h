@@ -11,7 +11,16 @@
 
 //Defines
 
+#define     SQUARE_FRAME_INTERVAL               (2)
+
+#define     SQUARE_SCORE_MAX                    (999999999)
+#define     SQUARE_MULTIPLIER_MAX               (99)
+
 #define     SQUARE_DELAY_MENU_SQUARE            (4.0)
+
+#define     SQUARE_DELAY_GAME_LINES_GAME             (1.5)
+#define     SQUARE_DELAY_GAME_LINES_MENU             (1.2)
+#define     SQUARE_DELAY_GAME_LINES_MARGIN_PERCENT  (1)
 
 #define     SQUARE_END_ANIMATION_DURATION       (0.2)
 #define     SQUARE_BEGIN_ANIMATION_DURATION     (0.2)
@@ -24,6 +33,14 @@
 #define     SQUARE_GAME_MIN_CHAIN_NUMBER        (2)
 #define     SQUARE_GAME_RESTART_DELAY           (0.5)
 #define     SQUARE_GAME_STARTING_RESPAWN_DELAY  (2)
+
+#define     SQUARE_DEMO                         [UIImage imageNamed:SQUARE_IMAGE_BASE];
+#define     SQUARE_DEMO_SCORE                   (2)
+#define     SQUARE_DEMO_DURATION                (7)
+#define     SQUARE_DEMO_DELAY                   (0)
+#define     SQUARE_DEMO_TOUCHES_NUMBER          (1)
+#define     SQUARE_DEMO_STARTING_SIZE           (10)
+#define     SQUARE_DEMO_ENDING_SIZE             (20)
 
 #define     SQUARE_BASE                         [UIImage imageNamed:SQUARE_IMAGE_BASE];
 #define     SQUARE_BASE_SCORE                   (2)
@@ -74,6 +91,8 @@
 
 #define     SQUARE_COLOR_CYAN               [UIColor colorWithRed:(111.f / 255.f) green:(195.f / 255.f) blue:(223.f / 255.f) alpha:1]
 #define     SQUARE_COLOR_BASESTART               [UIColor colorWithRed:(12.f / 255.f) green:(20.f / 255.f) blue:(31.f / 255.f) alpha:1]
+#define     SQUARE_COLOR_TRANSPARENT_WHITE               [UIColor colorWithRed:1 green:1 blue:1 alpha:.1f]
+
 
 
 #define     SQUARE_FONT_SMALL                   [UIFont fontWithName:@"SquareFont" size:10];
@@ -93,11 +112,16 @@ static NSString     *SQUARE_SMALL_BUTTON = @"Button small.png";
 static NSString     *SQUARE_LARGE_BUTTON = @"Button large.png";
 
 // Audio
-static NSString     *SQUARE_SOUND_CLICK = @"ClickButton.m4a";
+static NSString     *SQUARE_SOUND_CLICK = @"UI Sound.m4a";
+static NSString     *SQUARE_SOUND_EXPLOSION = @"Explosion.m4a";
+static NSString     *SQUARE_SOUND_MULTIPLIER = @"Multiplier.m4a";
+static NSString     *SQUARE_SOUND_GAMEOVER = @"GameOver.m4a";
+static NSString     *SQUARE_MUSIC_AMBIENT = @"Ambient BG.m4a";
+static NSString     *SQUARE_MUSIC_INGAME = @"Music IG.m4a";
 
 // Strings
 static NSString     *SQUARE_LEVELS_PLIST = @"Levels";
-static NSString     *SQUARE_LEVELS_PLAY = @"Play";
+static NSString     *SQUARE_LEVELS_TRAINING = @"Training";
 static NSString     *SQUARE_LEVELS_HARDCORE = @"Hardcore";
 
 static NSString     *SQUARE_LEVELS_REFRESH_DELAY = @"RefreshDelay";
@@ -110,6 +134,16 @@ static NSString     *SQUARE_LEVELS_AVAILABLE_SQUARES = @"Squares";
 
 static NSString     *SQUARE_BEST_SCORE_TRAINING = @"BestScoreTraining";
 static NSString     *SQUARE_BEST_SCORE_HARDCORE = @"BestScoreHardcore";
+
+static NSString     *SQUARE_MULTIPLIER_RESET = @"FAIL";
+
+static NSString     *SQUARE_OPTIONS_SOUND = @"SoundOption";
+static NSString     *SQUARE_OPTIONS_MUSIC = @"MusicOption";
+
+static NSString     *SQUARE_PGM = @"PGM";
+static NSString     *SQUARE_STUNNING = @"oO";
+
+
 /*
 static NSString     *SQUARE_ENUM_COLOR_BLUE = @"SquareBaseBlue";
 static NSString     *SQUARE_ENUM_COLOR_RED = @"SquareBaseRed";
@@ -131,8 +165,11 @@ static NSString     *SQUARE_FACEBOOK_ID = @"737859579566542";
 static NSString     *SQUARE_FACEBOOK_PERMISSION = @"publish_stream";
 
 // Events
+static NSString     *SQUARE_UPDATE_SCORE = @"square_update";
 static NSString     *SQUARE_DESTROYED = @"square_destroyed";
 static NSString     *SQUARE_MULTIPLIER = @"square_multiplier";
+static NSString     *SQUARE_PAUSE = @"square_pause";
 static NSString     *SQUARE_GAME_OVER = @"square_game_over";
+static NSString     *SQUARE_BEST_SCORE_EVER = @"BestScoreEver";
 
 #endif

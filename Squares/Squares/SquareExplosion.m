@@ -17,7 +17,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _squareExplosionEmitter = (CAEmitterLayer *)self.layer;
     }
     return self;
 }
@@ -31,16 +30,21 @@
     [self performSelector:@selector(disableExplosion) withObject:nil afterDelay:0.1];
     [self performSelector:@selector(removeExplosion) withObject:nil afterDelay:1.0];
     
+    [self explosationParticlesWithFrame:frame withColor:color];
+}
+
+- (void)explosationParticlesWithFrame:(CGRect)frame withColor:(UIColor *)color  {
+    CAEmitterLayer  *squareExplosionEmitter = (CAEmitterLayer *)self.layer;
     
-    _squareExplosionEmitter.emitterPosition = CGPointMake(frame.size.width / 2, frame.size.height /2);
-    _squareExplosionEmitter.emitterZPosition = 10;
-    _squareExplosionEmitter.emitterSize = CGSizeMake(frame.size.width, frame.size.height);
-    _squareExplosionEmitter.emitterShape = kCAEmitterLayerRectangle;
-    _squareExplosionEmitter.emitterMode = kCAEmitterLayerOutline;
-    _squareExplosionEmitter.renderMode = kCAEmitterLayerAdditive;
+    squareExplosionEmitter.emitterPosition = CGPointMake(frame.size.width / 2, frame.size.height /2);
+    squareExplosionEmitter.emitterZPosition = 10;
+    squareExplosionEmitter.emitterSize = CGSizeMake(frame.size.width, frame.size.height);
+    squareExplosionEmitter.emitterShape = kCAEmitterLayerRectangle;
+    squareExplosionEmitter.emitterMode = kCAEmitterLayerOutline;
+    squareExplosionEmitter.renderMode = kCAEmitterLayerAdditive;
     
     CAEmitterCell *emitterCell = [CAEmitterCell emitterCell];
-
+    
     emitterCell.birthRate = 75;
     emitterCell.lifetime = 0.5;
     emitterCell.velocity = 100;
@@ -55,14 +59,15 @@
     emitterCell.color = [color CGColor];
     emitterCell.contents = (id)[[UIImage imageNamed:@"particle_base-48x48.jpg"] CGImage];
     
-    _squareExplosionEmitter.emitterCells = [NSArray arrayWithObject:emitterCell];
+    squareExplosionEmitter.emitterCells = [NSArray arrayWithObject:emitterCell];
 }
 
 - (void)disableExplosion {
-    [_squareExplosionEmitter setValue:@0 forKeyPath:@"emitterCells.cell.birthRate"];
+    [self.layer setValue:@0 forKeyPath:@"emitterCells.cell.birthRate"];
 }
 
 - (void)removeExplosion {
+    [self.layer removeAllAnimations];
     [self removeFromSuperview];
 }
 

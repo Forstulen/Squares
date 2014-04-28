@@ -10,7 +10,11 @@
 #import "SquareScoreManager.h"
 #import "SquareCounter.h"
 #import "SquareExplosion.h"
+#import "SquareSoundManager.h"
+#import "SquareIndicatorLevel.h"
 #import "SquareMultiplier.h"
+#import "SquareParticlesEmitter.h"
+#import "SquareCrossedLines.h"
 #import "SquareLevels.h"
 #import "SquareBase.h"
 #import "defines.h"
@@ -39,32 +43,36 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gameOver) name:SQUARE_GAME_OVER object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayMultiplier:) name:SQUARE_MULTIPLIER object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(bestScoreEver) name:SQUARE_BEST_SCORE_EVER object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkScore) name:SQUARE_UPDATE_SCORE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pause:) name:SQUARE_PAUSE object:nil];
 
+    
     self.GameBoard.multipleTouchEnabled = YES;
     self.view.multipleTouchEnabled = YES;
-    self.Score.font = SQUARE_FONT_HUGE;
-    self.squareMultiplier.font = SQUARE_FONT_HUGE;
+    self.Score.font = SQUARE_FONT_BIG;
+    self.squareMultiplier.font = SQUARE_FONT_BIG ;
     self.squarePauseLabel.font = SQUARE_FONT_HUGE;
     self.squarePauseButton.enabled = NO;
     
-    // DEBUG
-    CGFloat realHeight = (self.GameBoard.frame.size.height - ((self.GameBoard.frame.size.height) * SQUARE_GRID_PADDING_PERCENT / 100));
-    CGFloat realWidth = (self.GameBoard.frame.size.width - ((self.GameBoard.frame.size.width) * SQUARE_GRID_PADDING_PERCENT / 100));
-
-    CGRect frame = CGRectMake(self.GameBoard.frame.origin.x + (self.GameBoard.frame.size.width - realWidth) / 2.0f, 0 + (self.GameBoard.frame.size.height - realHeight) / 2.0f, realWidth, realHeight);
-    UIView *view = [[UIView alloc] initWithFrame:frame];
-
-    view.layer.borderColor = [UIColor whiteColor].CGColor;
-    view.layer.borderWidth = 0.5f;
-    view.multipleTouchEnabled = YES;
-    view.userInteractionEnabled = YES;
-    [self.GameBoard addSubview:view];
-    //========================
+    self.Score.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.Score.layer.borderWidth = 2.0f;
+    
+    self.squareMultiplier.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.squareMultiplier.layer.borderWidth = 0.5f;
+    
+    self.GameBoard.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.GameBoard.layer.borderWidth = 0.5f;
+    self.GameBoard.multipleTouchEnabled = YES;
+    self.GameBoard.userInteractionEnabled = YES;
     
     _squareGrid = [SquareGrid squareGridWithFrame:self.GameBoard.frame];
     _squareGameOverViewController = [[SquareGameOverViewController alloc] initWithNibName:NSStringFromClass([SquareGameOverViewController class])  bundle:nil];
     
+    _squareParticlesEmitter = [SquareParticlesEmitter squareParticlesEmitterWithFrame:self.view.frame];
+    [self.GameBoard insertSubview:_squareParticlesEmitter atIndex:0];
+    
+    [[SquareSoundManager sharedSquareSoundManager] stopBgMusic];
     [self countdownBeforeGame];
 }
 
@@ -82,6 +90,7 @@
 - (void)countdownBeforeGame {
     SquareCounter   *counter = [[SquareCounter alloc] initWithParent:self.GameBoard];
     
+    [[SquareSoundManager sharedSquareSoundManager] playBgMusic:SQUARE_MUSIC_INGAME];
     [counter startCounter:3];
     [self performSelector:@selector(initializeGame) withObject:nil afterDelay:3];
 }
@@ -95,15 +104,26 @@
     if (!_squareGameLoop) {
         _squareGameLoop = [CADisplayLink displayLinkWithTarget:self
                                                              selector:@selector(update:)];
+        [_squareGameLoop setFrameInterval:SQUARE_FRAME_INTERVAL];
         [_squareGameLoop addToRunLoop:[NSRunLoop mainRunLoop]
                               forMode:NSRunLoopCommonModes];
     }
+    _squareGameLoop.paused = NO;
+    [_squareParticlesEmitter startEmitter];
     
     _squareElapsedTime = CACurrentMediaTime();
     _squareLastSpawnTime = CACurrentMediaTime();
     _squareLastActivityTime = CACurrentMediaTime();
     _squareLastLevelTime = CACurrentMediaTime();
     _squareLastRefreshTime = CACurrentMediaTime();
+    _squarePauseTime = CACurrentMediaTime();
+    _squareLastBackGroundLinesTime = CACurrentMediaTime();
+    
+    if (_squareGameType == SquareLevelsHardcore) {
+        [SquareIndicatorLevel squareIndicatorLevelWithParent:self.GameBoard withMessage:SQUARE_LEVELS_HARDCORE];
+    } else {
+        [SquareIndicatorLevel squareIndicatorLevelWithParent:self.GameBoard withMessage:SQUARE_LEVELS_TRAINING];
+    }
 }
 
 - (IBAction)pause:(id)sender {
@@ -113,27 +133,33 @@
             if (!_squareGridEnabled) {
                 [image pauseAnimation];
                 self.squarePauseLabel.hidden = NO;
+                [_squareParticlesEmitter pauseEmitter];
             } else {
                 [image unPauseAnimation];
                 self.squarePauseLabel.hidden = YES;
+                [_squareParticlesEmitter unPauseEmitter];
             }
         }
     }
 }
 
 - (void)update:(CADisplayLink*)displayLink {
-    
-    _squareElapsedTime = CACurrentMediaTime() - _squareElapsedTime;
-    
-    if (_squareGridEnabled) {
-        [self checkLevel];
-        [self checkSquare];
-        [self checkCollisions];
-        [self checkScore];
+    @autoreleasepool {
+        if (_squareGridEnabled) {
+            _squareElapsedTime = CACurrentMediaTime() - _squarePauseTime;
+        
+            [self checkLevel];
+            [self checkSquare];
+            [self checkCollisions];
+            [self checkBackgroundEffects];
+        } else {
+            _squarePauseTime = CACurrentMediaTime() - _squareElapsedTime;
+        }
     }
 }
 
 - (void)configureGameMode:(SquareGameType)type {
+    _squareGameType = type;
     [[SquareLevelsManager sharedSquareLevelsManager] setGameType:type];
     [[SquareScoreManager sharedSquareScoreManager] setGameType:type];
 }
@@ -158,16 +184,26 @@
 - (void)displayMultiplier:(NSNotification *)notification {
     NSNumber  *multiplier = notification.object;
     
-    [SquareMultiplier squareMultiplierWithParent:self.GameBoard withNumber:multiplier.integerValue withPosition:_squareLastPositionKnow];
+    [[SquareSoundManager sharedSquareSoundManager] playSound:SQUARE_SOUND_MULTIPLIER];
+    [SquareMultiplier squareMultiplierWithParent:self.GameBoard withMessage:[NSString stringWithFormat:@"X%lu", (unsigned long)multiplier.integerValue] withPosition:_squareLastPositionKnow];
 }
 
+- (void)checkBackgroundEffects {
+    if (CACurrentMediaTime() - _squareLastBackGroundLinesTime > SQUARE_DELAY_GAME_LINES_GAME + arc4random() % SQUARE_DELAY_GAME_LINES_MARGIN_PERCENT) {
+        [SquareCrossedLines squareCrossedLinesWithFrame:self.view.frame withParent:self.GameBoard];
+        
+        _squareLastBackGroundLinesTime = CACurrentMediaTime();
+    }
+}
 
 - (void)checkLevel {
     SquareLevelsManager *levelManager = [SquareLevelsManager sharedSquareLevelsManager];
     
-    if (levelManager.squareNextLevel != -1 && (CACurrentMediaTime() - _squareLastLevelTime) > levelManager.squareNextLevel) {
+    if (levelManager.squareNextLevel != -1 && _squareElapsedTime > levelManager.squareNextLevel) {
         [levelManager setNextLevel];
-        _squareLastLevelTime = CACurrentMediaTime();
+        _squareLastLevelTime = _squareElapsedTime;
+        
+        [SquareIndicatorLevel squareIndicatorLevelWithParent:self.GameBoard withMessage:[NSString stringWithFormat:@"Level %d", levelManager.squareCurrentIndex]];
     }
 }
 
@@ -203,14 +239,18 @@
     touchPoint = [self.GameBoard convertPoint:touchPoint toView:self.GameBoard.superview];
     square = [self.GameBoard.layer.presentationLayer hitTest: touchPoint];
     squareDelegate = [square delegate];
-    
     for (NSValue *val in _squareGrid.allKeys) {
         if (squareDelegate == [_squareGrid getSquare:val]) {
             [_squareGrid activateSquareAction:squareDelegate];
             return;
         }
     }
-    [[SquareScoreManager sharedSquareScoreManager] resetMultiplier];
+    if (squareDelegate != nil) {
+        if ([SquareScoreManager sharedSquareScoreManager].squareBonusMultiplier > 1) {
+            [SquareMultiplier squareMultiplierWithParent:self.GameBoard withMessage:SQUARE_MULTIPLIER_RESET withPosition:_squareLastPositionKnow];
+        }
+        [[SquareScoreManager sharedSquareScoreManager] resetMultiplier];
+    }
 }
 - (void)restartGame {
     [UIView animateWithDuration:SQUARE_GAME_RESTART_DELAY animations:^() {
@@ -238,8 +278,18 @@
             [image pauseAnimation];
         }
     }
+    _squareGameLoop.paused = YES;
+    [_squareParticlesEmitter pauseEmitter];
+    [[SquareSoundManager sharedSquareSoundManager] stopBgMusic];
+    [[SquareSoundManager sharedSquareSoundManager] playSound:SQUARE_SOUND_GAMEOVER];
     _squareGameOverViewController.squareGameOverViewDelegate = self;
     [_squareGameOverViewController presentAnimatedGameOverView:self.view withCompletion:nil];
+}
+
+- (void)bestScoreEver {
+    [self gameOver];
+    self.Score.text = SQUARE_PGM;
+    self.squareMultiplier.text = SQUARE_STUNNING;
 }
 
 - (void)checkScore {
@@ -250,8 +300,10 @@
 }
 
 - (void)checkCollisions {
-    for (SquareBase *rect in _squareGrid.allValues) {
-        for (SquareBase *collider in _squareGrid.allValues) {
+    NSArray *squares = _squareGrid.allValues;
+    
+    for (SquareBase *rect in squares) {
+        for (SquareBase *collider in squares) {
             if ((id)collider == [NSNull null] || (id)rect == [NSNull null]) {
                 continue;
             }
@@ -267,10 +319,14 @@
                 collider != rect &&
                 CGRectIntersectsRect(rect1, rect2)) {
                 CGRect intersection = CGRectIntersection(rect1, rect2);
-                SquareExplosion *explosion1 = [[SquareExplosion alloc] initWithFrame:intersection];
                 
-                [self.GameBoard addSubview:explosion1];
-                [explosion1 startExplosion:intersection withColor:SQUARE_COLOR_PANE];
+                intersection.size.width = 150;
+                intersection.size.height = intersection.size.width;
+                
+                SquareExplosion *explosion = [[SquareExplosion alloc] initWithFrame:intersection];
+                
+                [self.GameBoard addSubview:explosion];
+                [explosion startExplosion:intersection withColor:[SquareBase randomColor]];
                 [self gameOver];
                 break;
             }
@@ -287,7 +343,6 @@
         _squareLastPositionKnow = [touch locationInView: self.GameBoard];
         
         if (_squareGridEnabled) {
-            
             [self activateSquareAction:_squareLastPositionKnow];
         }
     }

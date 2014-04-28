@@ -19,6 +19,7 @@ typedef enum {
 @class SquareGrid;
 
 @interface SquareBase : UIImageView {
+    
     SquareGrid          *_squareGrid;
 }
 
@@ -35,6 +36,7 @@ typedef enum {
 + (SquareBase *)squareBaseWithPosition:(CGPoint)point withGrid:(SquareGrid *)grid;
 + (NSString*)squareColorEnumToString:(SquareBaseColor)enumVal;
 + (SquareBaseColor)squareColorStringToEnum:(NSString*)strVal;
++ (UIColor*)randomColor;
 
 @property (nonatomic) SquareBaseColor squareColor;
 @property (nonatomic) CGFloat squareScalingDuration;

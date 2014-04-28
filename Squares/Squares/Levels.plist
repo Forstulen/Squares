@@ -2,8 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Play</key>
+	<key>Training</key>
 	<array>
+		<dict>
+			<key>RefreshDelay</key>
+			<integer>3</integer>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>10</integer>
+			<key>Number</key>
+			<integer>1</integer>
+			<key>InactivityDelay</key>
+			<integer>15</integer>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeBase</key>
+				<integer>100</integer>
+			</dict>
+		</dict>
 		<dict>
 			<key>RefreshDelay</key>
 			<integer>1</integer>
@@ -14,9 +33,9 @@
 			<key>NextLevel</key>
 			<integer>30</integer>
 			<key>Number</key>
-			<integer>3</integer>
+			<integer>2</integer>
 			<key>InactivityDelay</key>
-			<real>1.5</real>
+			<real>1.2</real>
 			<key>Squares</key>
 			<dict>
 				<key>SquareTypeBase</key>
@@ -25,17 +44,17 @@
 		</dict>
 		<dict>
 			<key>RefreshDelay</key>
-			<real>0.8</real>
+			<integer>1</integer>
 			<key>SpawnDelay</key>
 			<integer>-1</integer>
 			<key>Respawn</key>
 			<true/>
 			<key>NextLevel</key>
-			<integer>45</integer>
+			<integer>60</integer>
 			<key>Number</key>
-			<integer>4</integer>
+			<integer>3</integer>
 			<key>InactivityDelay</key>
-			<real>1.2</real>
+			<integer>1</integer>
 			<key>Squares</key>
 			<dict>
 				<key>SquareTypeExponential</key>
@@ -46,25 +65,194 @@
 		</dict>
 		<dict>
 			<key>RefreshDelay</key>
-			<real>0.6</real>
+			<integer>1</integer>
 			<key>SpawnDelay</key>
 			<integer>-1</integer>
 			<key>Respawn</key>
 			<true/>
 			<key>NextLevel</key>
-			<integer>60</integer>
+			<integer>90</integer>
 			<key>Number</key>
-			<integer>4</integer>
+			<integer>3</integer>
 			<key>InactivityDelay</key>
-			<real>1</real>
+			<integer>1</integer>
 			<key>Squares</key>
 			<dict>
 				<key>SquareTypeResilient</key>
+				<integer>20</integer>
+				<key>SquareTypeBase</key>
+				<integer>80</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>RefreshDelay</key>
+			<integer>1</integer>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>120</integer>
+			<key>Number</key>
+			<integer>3</integer>
+			<key>InactivityDelay</key>
+			<integer>1</integer>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeIndestructible</key>
+				<integer>20</integer>
+				<key>SquareTypeBase</key>
+				<integer>80</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>RefreshDelay</key>
+			<integer>1</integer>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>150</integer>
+			<key>Number</key>
+			<integer>3</integer>
+			<key>InactivityDelay</key>
+			<integer>1</integer>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeGameOver</key>
+				<integer>10</integer>
+				<key>SquareTypeBase</key>
+				<integer>90</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>RefreshDelay</key>
+			<real>0.9</real>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>180</integer>
+			<key>Number</key>
+			<integer>4</integer>
+			<key>InactivityDelay</key>
+			<integer>1</integer>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeExponential</key>
+				<integer>20</integer>
+				<key>SquareTypeResilient</key>
+				<integer>10</integer>
+				<key>SquareTypeBase</key>
+				<integer>70</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>RefreshDelay</key>
+			<real>0.8</real>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>210</integer>
+			<key>Number</key>
+			<integer>4</integer>
+			<key>InactivityDelay</key>
+			<real>0.8</real>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeIndestructible</key>
 				<integer>10</integer>
 				<key>SquareTypeExponential</key>
 				<integer>20</integer>
+				<key>SquareTypeResilient</key>
+				<integer>10</integer>
 				<key>SquareTypeBase</key>
-				<integer>70</integer>
+				<integer>60</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>RefreshDelay</key>
+			<real>0.8</real>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>240</integer>
+			<key>Number</key>
+			<integer>4</integer>
+			<key>InactivityDelay</key>
+			<real>0.8</real>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeGameOver</key>
+				<integer>1</integer>
+				<key>SquareTypeIndestructible</key>
+				<integer>10</integer>
+				<key>SquareTypeExponential</key>
+				<integer>20</integer>
+				<key>SquareTypeResilient</key>
+				<integer>10</integer>
+				<key>SquareTypeBase</key>
+				<integer>59</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>RefreshDelay</key>
+			<real>0.8</real>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>270</integer>
+			<key>Number</key>
+			<integer>5</integer>
+			<key>InactivityDelay</key>
+			<real>0.8</real>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeGameOver</key>
+				<integer>1</integer>
+				<key>SquareTypeIndestructible</key>
+				<integer>10</integer>
+				<key>SquareTypeExponential</key>
+				<integer>20</integer>
+				<key>SquareTypeResilient</key>
+				<integer>10</integer>
+				<key>SquareTypeBase</key>
+				<integer>59</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>RefreshDelay</key>
+			<real>0.7</real>
+			<key>SpawnDelay</key>
+			<integer>-1</integer>
+			<key>Respawn</key>
+			<true/>
+			<key>NextLevel</key>
+			<integer>-1</integer>
+			<key>Number</key>
+			<integer>5</integer>
+			<key>InactivityDelay</key>
+			<real>0.8</real>
+			<key>Squares</key>
+			<dict>
+				<key>SquareTypeGameOver</key>
+				<integer>1</integer>
+				<key>SquareTypeIndestructible</key>
+				<integer>10</integer>
+				<key>SquareTypeExponential</key>
+				<integer>20</integer>
+				<key>SquareTypeResilient</key>
+				<integer>10</integer>
+				<key>SquareTypeBase</key>
+				<integer>59</integer>
 			</dict>
 		</dict>
 	</array>
