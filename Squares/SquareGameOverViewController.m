@@ -37,17 +37,24 @@
     self.squareBestScore.font = SQUARE_FONT_BIG;
     
     
-    [self.squareFacebookButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_CYAN] forState:UIControlStateNormal];
-    self.squareFacebookButton.titleLabel.font = SQUARE_FONT_MEDIUM;
-    [self.squareFacebookButton setTitleColor:SQUARE_COLOR_CYAN forState:UIControlStateNormal];
-    
-    [self.squareTryAgainButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_ORANGE] forState:UIControlStateNormal];
+    self.squareTryAgainButton.layer.borderColor = SQUARE_COLOR_PANE.CGColor;
+    self.squareTryAgainButton.layer.borderWidth = 1.0f;
     self.squareTryAgainButton.titleLabel.font = SQUARE_FONT_MEDIUM;
-    [self.squareTryAgainButton setTitleColor:SQUARE_COLOR_ORANGE forState:UIControlStateNormal];
+    [self.squareTryAgainButton setTitleColor:SQUARE_COLOR_PANE forState:UIControlStateNormal];
+    self.squareTryAgainButton.titleLabel.backgroundColor = [UIColor clearColor];
     
-    [self.squareQuitButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_YELLOW] forState:UIControlStateNormal];
+    self.squareQuitButton.layer.borderColor = SQUARE_COLOR_PANE.CGColor;
+    self.squareQuitButton.layer.borderWidth = 1.0f;
     self.squareQuitButton.titleLabel.font = SQUARE_FONT_MEDIUM;
-    [self.squareQuitButton setTitleColor:SQUARE_COLOR_YELLOW forState:UIControlStateNormal];
+    [self.squareQuitButton setTitleColor:SQUARE_COLOR_PANE forState:UIControlStateNormal];
+    [self.squareQuitButton setBackgroundImage:nil forState:UIControlStateNormal];
+    self.squareQuitButton.titleLabel.backgroundColor = [UIColor clearColor];
+    
+    _squareActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    _squareActivityIndicator.frame = self.view.frame;
+    [self.view addSubview:_squareActivityIndicator];
+    _squareActivityIndicator.hidesWhenStopped = YES;
+    [SquareSocialController sharedSquareSocialController].squareDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +63,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)startRequest {
+    [_squareActivityIndicator startAnimating];
+    self.squareFacebookButton.enabled = NO;
+}
+
+- (void)stopRequest {
+    [_squareActivityIndicator stopAnimating];
+    self.squareFacebookButton.enabled = YES;
+}
+     
 - (IBAction)postScoreOnFacebook:(id)sender {
     [[SquareSoundManager sharedSquareSoundManager] playSound:SQUARE_SOUND_CLICK];
     SquareLevelsManager *levelsManager = [SquareLevelsManager sharedSquareLevelsManager];

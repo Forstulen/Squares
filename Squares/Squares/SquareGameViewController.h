@@ -14,7 +14,7 @@
 
 @class  SquareParticlesEmitter;
 
-@interface SquareGameViewController : UIViewController <SquareGameOvertDelegate> {
+@interface SquareGameViewController : UIViewController <SquareGameOverDelegate> {
     SquareGrid      *_squareGrid;
     SquareGameType  _squareGameType;
     SquareGameOverViewController *_squareGameOverViewController;

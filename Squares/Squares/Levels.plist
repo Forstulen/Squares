@@ -5,6 +5,8 @@
 	<key>Training</key>
 	<array>
 		<dict>
+			<key>LevelDetail</key>
+			<string>Tap the squares</string>
 			<key>RefreshDelay</key>
 			<integer>3</integer>
 			<key>SpawnDelay</key>
@@ -24,6 +26,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>More squares</string>
 			<key>RefreshDelay</key>
 			<integer>1</integer>
 			<key>SpawnDelay</key>
@@ -43,6 +47,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>fast-growing</string>
 			<key>RefreshDelay</key>
 			<integer>1</integer>
 			<key>SpawnDelay</key>
@@ -64,6 +70,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>Strong ones</string>
 			<key>RefreshDelay</key>
 			<integer>1</integer>
 			<key>SpawnDelay</key>
@@ -85,6 +93,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>INDESTRUCTIBLE</string>
 			<key>RefreshDelay</key>
 			<integer>1</integer>
 			<key>SpawnDelay</key>
@@ -106,6 +116,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>Don&apos;t touch</string>
 			<key>RefreshDelay</key>
 			<integer>1</integer>
 			<key>SpawnDelay</key>
@@ -127,6 +139,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>combination </string>
 			<key>RefreshDelay</key>
 			<real>0.9</real>
 			<key>SpawnDelay</key>
@@ -150,6 +164,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>combination</string>
 			<key>RefreshDelay</key>
 			<real>0.8</real>
 			<key>SpawnDelay</key>
@@ -175,6 +191,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>combination</string>
 			<key>RefreshDelay</key>
 			<real>0.8</real>
 			<key>SpawnDelay</key>
@@ -202,6 +220,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>More squares</string>
 			<key>RefreshDelay</key>
 			<real>0.8</real>
 			<key>SpawnDelay</key>
@@ -229,6 +249,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>LevelDetail</key>
+			<string>Infinite</string>
 			<key>RefreshDelay</key>
 			<real>0.7</real>
 			<key>SpawnDelay</key>
@@ -259,6 +281,8 @@
 	<key>Hardcore</key>
 	<array>
 		<dict>
+			<key>LevelDetail</key>
+			<string>Infinite</string>
 			<key>RefreshDelay</key>
 			<integer>0</integer>
 			<key>SpawnDelay</key>

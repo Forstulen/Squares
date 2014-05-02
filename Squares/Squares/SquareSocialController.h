@@ -7,13 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SquareGameViewController.h"
+#import "SquareLevels.h"
 
 @class ACAccount;
 @class ACAccountStore;
 @class ACAccountType;
 
+@protocol SquareSocialDelegate <NSObject>
+- (void)startRequest;
+- (void)stopRequest;
+@end
+
 typedef void (^FacebookCompletionBlock) (BOOL valid);
+
 
 @interface SquareSocialController : NSObject {
     __block ACAccount *_squareFacebookAccount;
@@ -24,5 +30,7 @@ typedef void (^FacebookCompletionBlock) (BOOL valid);
 + (SquareSocialController *)sharedSquareSocialController;
 
 - (void)postOnFacebook:(SquareGameType)game withScore:(NSUInteger)score;
+
+@property (strong, nonatomic) id<SquareSocialDelegate>    squareDelegate;
 
 @end

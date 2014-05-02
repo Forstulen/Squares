@@ -27,16 +27,24 @@
     return self;
 }
 
+- (void)dealloc {
+    [_squareMenuLoop removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    _squareMenuLoop = nil;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.squareSoundsLabel.font = SQUARE_FONT_BIG;
-    self.squareMusicLabel.font = SQUARE_FONT_BIG;
+    self.squareSoundsLabel.font = SQUARE_FONT_MEDIUM;
+    self.squareSoundsLabel.textColor = SQUARE_COLOR_PANE;
+    self.squareMusicLabel.font = SQUARE_FONT_MEDIUM;
+    self.squareMusicLabel.textColor = SQUARE_COLOR_PANE;
     
-    [self.squareDoneButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_ORANGE] forState:UIControlStateNormal];
+    self.squareDoneButton.layer.borderColor = SQUARE_COLOR_PANE.CGColor;
+    self.squareDoneButton.layer.borderWidth = 1.0f;
     self.squareDoneButton.titleLabel.font = SQUARE_FONT_MEDIUM;
-    [self.squareDoneButton setTitleColor:SQUARE_COLOR_ORANGE forState:UIControlStateNormal];
+    [self.squareDoneButton setTitleColor:SQUARE_COLOR_PANE forState:UIControlStateNormal];
     
     [self loadOptions];
     

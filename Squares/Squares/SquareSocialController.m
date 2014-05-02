@@ -45,14 +45,15 @@
 	alert.message = mess;
 	alert.cancelButtonIndex = [alert addButtonWithTitle:@"Ok"];
 
-    [alert show];
+    // Alert must be shown with the main thread in iOS6.0
+    [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:YES];
 }
 
 - (NSDictionary *)getReadFacebookOptions {
     NSDictionary *options = @{
                               ACFacebookAppIdKey:SQUARE_FACEBOOK_ID,
                               ACFacebookPermissionsKey: @[@"email"],
-                              ACFacebookAudienceKey: ACFacebookAudienceOnlyMe
+                              ACFacebookAudienceKey: ACFacebookAudienceFriends
                               };
     
     return options;
@@ -63,7 +64,7 @@
     NSDictionary *options = @{
                               ACFacebookAppIdKey:SQUARE_FACEBOOK_ID,
                               ACFacebookPermissionsKey: @[@"email", @"publish_actions"],
-                              ACFacebookAudienceKey: ACFacebookAudienceOnlyMe
+                              ACFacebookAudienceKey: ACFacebookAudienceFriends
                               };
     
     return options;
@@ -94,9 +95,9 @@
      NSURL *feedURL = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
     
     if (game == SquareLevelsPlay) {
-        parameters = @{@"message": [NSString stringWithFormat:@"Training play: My score is %lu", (unsigned long)score]};
+        parameters = @{@"message": [NSString stringWithFormat:@"SQUARES/nTraining mode %lu", (unsigned long)score]};
     } else {
-        parameters = @{@"message": [NSString stringWithFormat:@"Hardcore: My score is %lu", (unsigned long)score]};
+        parameters = @{@"message": [NSString stringWithFormat:@"SQUARES/nHardcore mode %lu", (unsigned long)score]};
     }
     
     SLRequest *feedRequest = [SLRequest requestForServiceType:SLServiceTypeFacebook
@@ -107,6 +108,9 @@
     feedRequest.account = _squareFacebookAccount;
     [feedRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
         NSString    *output;
+        if (self.squareDelegate)
+            [self.squareDelegate stopRequest];
+        
         if(error == nil) {
             output = @"Your score is now on Facebook";
         } else {
@@ -119,6 +123,9 @@
 - (void)handleFacebookError {
     NSArray *facebookAccounts = [_squareAccountStore accountsWithAccountType:_squareAccountType];
     
+    if (self.squareDelegate)
+        [self.squareDelegate stopRequest];
+    
     if(facebookAccounts != nil && [facebookAccounts count] == 0) {
         [self presentSimpleAlertViewWithMessage:@"There are no Facebook accounts configured. You can add or create a Facebook account in Settings."];
     } else {
@@ -127,6 +134,9 @@
 }
 
 - (void)postOnFacebook:(SquareGameType)game withScore:(NSUInteger)score {
+    if (self.squareDelegate)
+        [self.squareDelegate startRequest];
+    
     [self requestAccessToFacebookAccountWithCompletionHandler:^(BOOL valid) {
         if (!valid) {
             [self handleFacebookError];

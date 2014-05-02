@@ -43,14 +43,11 @@
                      }
      
                      completion:^(BOOL finished) {
+                         self.image = nil;
                          [_squareGrid removeSquare:self];
                          [self.layer removeAllAnimations];
                          [self removeFromSuperview];
                      }];
-}
-
-- (void)doAction {
-    [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_GAME_OVER object:nil userInfo:nil];
 }
 
 @end

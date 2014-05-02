@@ -43,6 +43,7 @@
                      }
      
                      completion:^(BOOL finished) {
+                         self.image = nil;
                          [_squareGrid removeSquare:self];
                          [self.layer removeAllAnimations];
                          [self removeFromSuperview];

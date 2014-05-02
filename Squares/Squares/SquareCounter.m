@@ -12,13 +12,14 @@
 @implementation SquareCounter
 
 - (id)initWithParent:(UIView *)parent {
-    CGRect frame = CGRectMake(parent.frame.size.width / 2 - 50, parent.frame.size.height / 2 - 50, 100, 100);
+    CGRect frame = CGRectMake(0, 0, parent.frame.size.width, parent.frame.size.height);
     
     if (self = [super initWithFrame:frame]) {
         _squareCounterLabel =[[UILabel alloc] init];
         _squareCounterLabel.text = @"3";
         _squareCounterLabel.font = SQUARE_FONT_HUGE;
         _squareCounterLabel.textColor = [UIColor whiteColor];
+        _squareCounterLabel.backgroundColor = [UIColor clearColor];
         _squareCounterLabel.contentMode = UIViewContentModeScaleAspectFit;
         _squareCounterLabel.textAlignment = NSTextAlignmentCenter;
         
@@ -26,7 +27,6 @@
         self.userInteractionEnabled = YES;
         [self addSubview:_squareCounterLabel];
         self.backgroundColor = [UIColor clearColor];
-        self.alpha = 0.7;
     }
     return self;
 }
@@ -53,7 +53,9 @@
     }
     
     if (_squareCounter == 0) {
+        [_squareCounterLoop invalidate];
         [_squareCounterLoop removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+        _squareCounterLoop = nil;
         [_squareCounterLabel removeFromSuperview];
         [self removeFromSuperview];
     }

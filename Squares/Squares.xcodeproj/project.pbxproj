@@ -94,7 +94,12 @@
 		7F41092918EEF1EC007F8750 /* SquareMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F41092718EEF1EC007F8750 /* SquareMenuViewController.xib */; };
 		7F41092D18EEF381007F8750 /* SquareGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41092B18EEF381007F8750 /* SquareGameViewController.m */; };
 		7F41093118EEF847007F8750 /* SquareBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F41093018EEF847007F8750 /* SquareBase.m */; };
+		7F94C892190EB10A00E1E041 /* SQUARES LOGO Test @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C888190EB10A00E1E041 /* SQUARES LOGO Test @2x.png */; };
+		7F94C893190EB10A00E1E041 /* SQUARES LOGO Test.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C889190EB10A00E1E041 /* SQUARES LOGO Test.png */; };
+		7F94C899190EB10A00E1E041 /* squares_logo iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C88F190EB10A00E1E041 /* squares_logo iPad.png */; };
 		7FAC4851190D7E3700CC4227 /* SquareCrossedLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC4850190D7E3700CC4227 /* SquareCrossedLines.m */; };
+		7FAC4858190E8F7700CC4227 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC4857190E8F7700CC4227 /* facebook.png */; };
+		7FAC485C190E8FA700CC4227 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC485B190E8FA700CC4227 /* facebook@2x.png */; };
 		7FAED710190B069500ABF9DB /* Ambient BG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70A190B069500ABF9DB /* Ambient BG.m4a */; };
 		7FAED711190B069500ABF9DB /* Explosion.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70B190B069500ABF9DB /* Explosion.m4a */; };
 		7FAED712190B069500ABF9DB /* GameOver.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FAED70C190B069500ABF9DB /* GameOver.m4a */; };
@@ -111,18 +116,21 @@
 		7FBDD4A419081A3C0098594F /* Button large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD48E19081A3C0098594F /* Button large@2x.png */; };
 		7FBDD4A519081A3C0098594F /* Button small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD48F19081A3C0098594F /* Button small.png */; };
 		7FBDD4A619081A3C0098594F /* Button small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD49019081A3C0098594F /* Button small@2x.png */; };
-		7FBDD4A719081A3C0098594F /* LOGO Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD49119081A3C0098594F /* LOGO Menu.png */; };
-		7FBDD4A819081A3C0098594F /* LOGO Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD49219081A3C0098594F /* LOGO Menu@2x.png */; };
-		7FBDD4AB19081A3C0098594F /* Splash iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD49519081A3C0098594F /* Splash iphone5.png */; };
-		7FBDD4AC19081A3C0098594F /* Splash iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD49619081A3C0098594F /* Splash iphone5@2x.png */; };
-		7FBDD4AD19081A3C0098594F /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD49719081A3C0098594F /* Splash.png */; };
-		7FBDD4AE19081A3C0098594F /* Splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD49819081A3C0098594F /* Splash@2x.png */; };
 		7FBDD4B619081A3C0098594F /* squares_logo_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD4A019081A3C0098594F /* squares_logo_1024.png */; };
 		7FBDD4B719081A3C0098594F /* squares_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD4A119081A3C0098594F /* squares_logo.png */; };
-		7FBDD4B819081A3C0098594F /* squares_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBDD4A219081A3C0098594F /* squares_logo@2x.png */; };
 		7FC20D4B1909C39900B041CD /* SquareIndicatorLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D4A1909C39900B041CD /* SquareIndicatorLevel.m */; };
 		7FC20D59190A5F5900B041CD /* SquareOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D57190A5F5900B041CD /* SquareOptionsViewController.m */; };
 		7FC20D5A190A5F5900B041CD /* SquareOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC20D58190A5F5900B041CD /* SquareOptionsViewController.xib */; };
+		7FE5EC18190EB22A0081B4FA /* squares_logo ios6 @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C88A190EB10A00E1E041 /* squares_logo ios6 @2x.png */; };
+		7FE5EC19190EB22A0081B4FA /* squares_logo ios6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C88B190EB10A00E1E041 /* squares_logo ios6.png */; };
+		7FE5EC1A190EB22A0081B4FA /* squares_logo ios7 @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C88C190EB10A00E1E041 /* squares_logo ios7 @2x.png */; };
+		7FE5EC1B190EB22A0081B4FA /* squares_logo ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C88D190EB10A00E1E041 /* squares_logo ios7.png */; };
+		7FE5EC1C190EB22A0081B4FA /* squares_logo iPad @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C88E190EB10A00E1E041 /* squares_logo iPad @2x.png */; };
+		7FE5EC1D190EB22A0081B4FA /* squares_logo iPad6 @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C890190EB10A00E1E041 /* squares_logo iPad6 @2x.png */; };
+		7FE5EC1E190EB22A0081B4FA /* squares_logo iPad6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F94C891190EB10A00E1E041 /* squares_logo iPad6.png */; };
+		7FE5EC22190EB2DE0081B4FA /* Splash screen @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE5EC1F190EB2DE0081B4FA /* Splash screen @2x.png */; };
+		7FE5EC23190EB2DE0081B4FA /* Splash screen iPhone5 @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE5EC20190EB2DE0081B4FA /* Splash screen iPhone5 @2x.png */; };
+		7FE5EC24190EB2DE0081B4FA /* Splash screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FE5EC21190EB2DE0081B4FA /* Splash screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,8 +305,20 @@
 		7F41092B18EEF381007F8750 /* SquareGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareGameViewController.m; sourceTree = "<group>"; };
 		7F41092F18EEF847007F8750 /* SquareBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareBase.h; sourceTree = "<group>"; };
 		7F41093018EEF847007F8750 /* SquareBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareBase.m; sourceTree = "<group>"; };
+		7F94C888190EB10A00E1E041 /* SQUARES LOGO Test @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SQUARES LOGO Test @2x.png"; sourceTree = "<group>"; };
+		7F94C889190EB10A00E1E041 /* SQUARES LOGO Test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SQUARES LOGO Test.png"; sourceTree = "<group>"; };
+		7F94C88A190EB10A00E1E041 /* squares_logo ios6 @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo ios6 @2x.png"; sourceTree = "<group>"; };
+		7F94C88B190EB10A00E1E041 /* squares_logo ios6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo ios6.png"; sourceTree = "<group>"; };
+		7F94C88C190EB10A00E1E041 /* squares_logo ios7 @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo ios7 @2x.png"; sourceTree = "<group>"; };
+		7F94C88D190EB10A00E1E041 /* squares_logo ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo ios7.png"; sourceTree = "<group>"; };
+		7F94C88E190EB10A00E1E041 /* squares_logo iPad @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo iPad @2x.png"; sourceTree = "<group>"; };
+		7F94C88F190EB10A00E1E041 /* squares_logo iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo iPad.png"; sourceTree = "<group>"; };
+		7F94C890190EB10A00E1E041 /* squares_logo iPad6 @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo iPad6 @2x.png"; sourceTree = "<group>"; };
+		7F94C891190EB10A00E1E041 /* squares_logo iPad6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squares_logo iPad6.png"; sourceTree = "<group>"; };
 		7FAC484F190D7E3700CC4227 /* SquareCrossedLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareCrossedLines.h; sourceTree = "<group>"; };
 		7FAC4850190D7E3700CC4227 /* SquareCrossedLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareCrossedLines.m; sourceTree = "<group>"; };
+		7FAC4857190E8F7700CC4227 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		7FAC485B190E8FA700CC4227 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
 		7FAE3D1E1909B3C40095321D /* Ambient sound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "Ambient sound.aiff"; sourceTree = "<group>"; };
 		7FAE3D1F1909B3C40095321D /* Explosion.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Explosion.aiff; sourceTree = "<group>"; };
 		7FAE3D201909B3C40095321D /* GameOver.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = GameOver.aiff; sourceTree = "<group>"; };
@@ -326,9 +346,6 @@
 		7FBDD49019081A3C0098594F /* Button small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button small@2x.png"; sourceTree = "<group>"; };
 		7FBDD49119081A3C0098594F /* LOGO Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LOGO Menu.png"; sourceTree = "<group>"; };
 		7FBDD49219081A3C0098594F /* LOGO Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LOGO Menu@2x.png"; sourceTree = "<group>"; };
-		7FBDD49519081A3C0098594F /* Splash iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash iphone5.png"; sourceTree = "<group>"; };
-		7FBDD49619081A3C0098594F /* Splash iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash iphone5@2x.png"; sourceTree = "<group>"; };
-		7FBDD49719081A3C0098594F /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
 		7FBDD49819081A3C0098594F /* Splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash@2x.png"; sourceTree = "<group>"; };
 		7FBDD49919081A3C0098594F /* Square Death.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Square Death.png"; sourceTree = "<group>"; };
 		7FBDD49B19081A3C0098594F /* Square Indestructible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Square Indestructible.png"; sourceTree = "<group>"; };
@@ -344,6 +361,9 @@
 		7FC20D56190A5F5900B041CD /* SquareOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareOptionsViewController.h; sourceTree = "<group>"; };
 		7FC20D57190A5F5900B041CD /* SquareOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareOptionsViewController.m; sourceTree = "<group>"; };
 		7FC20D58190A5F5900B041CD /* SquareOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareOptionsViewController.xib; sourceTree = "<group>"; };
+		7FE5EC1F190EB2DE0081B4FA /* Splash screen @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash screen @2x.png"; sourceTree = "<group>"; };
+		7FE5EC20190EB2DE0081B4FA /* Splash screen iPhone5 @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash screen iPhone5 @2x.png"; sourceTree = "<group>"; };
+		7FE5EC21190EB2DE0081B4FA /* Splash screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash screen.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -733,6 +753,21 @@
 		7FB96A5818F608FA00781FA3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7FE5EC1F190EB2DE0081B4FA /* Splash screen @2x.png */,
+				7FE5EC20190EB2DE0081B4FA /* Splash screen iPhone5 @2x.png */,
+				7FE5EC21190EB2DE0081B4FA /* Splash screen.png */,
+				7F94C888190EB10A00E1E041 /* SQUARES LOGO Test @2x.png */,
+				7F94C889190EB10A00E1E041 /* SQUARES LOGO Test.png */,
+				7F94C88A190EB10A00E1E041 /* squares_logo ios6 @2x.png */,
+				7F94C88B190EB10A00E1E041 /* squares_logo ios6.png */,
+				7F94C88C190EB10A00E1E041 /* squares_logo ios7 @2x.png */,
+				7F94C88D190EB10A00E1E041 /* squares_logo ios7.png */,
+				7F94C88E190EB10A00E1E041 /* squares_logo iPad @2x.png */,
+				7F94C88F190EB10A00E1E041 /* squares_logo iPad.png */,
+				7F94C890190EB10A00E1E041 /* squares_logo iPad6 @2x.png */,
+				7F94C891190EB10A00E1E041 /* squares_logo iPad6.png */,
+				7FAC485B190E8FA700CC4227 /* facebook@2x.png */,
+				7FAC4857190E8F7700CC4227 /* facebook.png */,
 				7F1D66E4190952CB00BA43C9 /* ParticleSmoke.png */,
 				7F1D66E21909423F00BA43C9 /* particle_base-48x48.jpg */,
 				7FBDD48D19081A3C0098594F /* Button large.png */,
@@ -742,9 +777,6 @@
 				7FBDD49019081A3C0098594F /* Button small@2x.png */,
 				7FBDD49119081A3C0098594F /* LOGO Menu.png */,
 				7FBDD49219081A3C0098594F /* LOGO Menu@2x.png */,
-				7FBDD49519081A3C0098594F /* Splash iphone5.png */,
-				7FBDD49619081A3C0098594F /* Splash iphone5@2x.png */,
-				7FBDD49719081A3C0098594F /* Splash.png */,
 				7FBDD49819081A3C0098594F /* Splash@2x.png */,
 				7FBDD49919081A3C0098594F /* Square Death.png */,
 				7FBDD49B19081A3C0098594F /* Square Indestructible.png */,
@@ -873,6 +905,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE5EC18190EB22A0081B4FA /* squares_logo ios6 @2x.png in Resources */,
+				7FE5EC19190EB22A0081B4FA /* squares_logo ios6.png in Resources */,
+				7FE5EC1A190EB22A0081B4FA /* squares_logo ios7 @2x.png in Resources */,
+				7FE5EC1B190EB22A0081B4FA /* squares_logo ios7.png in Resources */,
+				7FE5EC1C190EB22A0081B4FA /* squares_logo iPad @2x.png in Resources */,
+				7FE5EC22190EB2DE0081B4FA /* Splash screen @2x.png in Resources */,
+				7FE5EC1D190EB22A0081B4FA /* squares_logo iPad6 @2x.png in Resources */,
+				7FE5EC1E190EB22A0081B4FA /* squares_logo iPad6.png in Resources */,
 				7F35990719088C5000AA4C30 /* Square Death.png in Resources */,
 				7F35990819088C5000AA4C30 /* Square Indestructible.png in Resources */,
 				7F35990919088C5000AA4C30 /* Square Resilient1.png in Resources */,
@@ -887,25 +927,22 @@
 				7F3598F71908281C00AA4C30 /* Square.ttf in Resources */,
 				7F3598F81908281C00AA4C30 /* Squareo.ttf in Resources */,
 				7FBDD4A319081A3C0098594F /* Button large.png in Resources */,
-				7FBDD4A719081A3C0098594F /* LOGO Menu.png in Resources */,
-				7FBDD4A819081A3C0098594F /* LOGO Menu@2x.png in Resources */,
-				7FBDD4B819081A3C0098594F /* squares_logo@2x.png in Resources */,
+				7FAC4858190E8F7700CC4227 /* facebook.png in Resources */,
 				7F1D66A919090DAD00BA43C9 /* ObjectAL-Overview2.eps in Resources */,
+				7FE5EC23190EB2DE0081B4FA /* Splash screen iPhone5 @2x.png in Resources */,
 				7F1D66C719090DAD00BA43C9 /* InfoPlist.strings in Resources */,
 				7FBDD4B619081A3C0098594F /* squares_logo_1024.png in Resources */,
 				7F2EF1CF18F3FC9700ED4852 /* Levels.plist in Resources */,
-				7FBDD4AC19081A3C0098594F /* Splash iphone5@2x.png in Resources */,
 				7FAED713190B069500ABF9DB /* Multiplier.m4a in Resources */,
+				7FE5EC24190EB2DE0081B4FA /* Splash screen.png in Resources */,
 				7F41092918EEF1EC007F8750 /* SquareMenuViewController.xib in Resources */,
 				7F2EF1B318F226C200ED4852 /* SquareGameViewController.xib in Resources */,
 				7FAFCC5218F4C82700E5EEFD /* Background.png in Resources */,
 				7FC20D5A190A5F5900B041CD /* SquareOptionsViewController.xib in Resources */,
 				7F41090418EEDC42007F8750 /* Images.xcassets in Resources */,
 				7FAED711190B069500ABF9DB /* Explosion.m4a in Resources */,
-				7FBDD4AD19081A3C0098594F /* Splash.png in Resources */,
 				7F35990619086E2E00AA4C30 /* Square Exponential.png in Resources */,
 				7FAED710190B069500ABF9DB /* Ambient BG.m4a in Resources */,
-				7FBDD4AE19081A3C0098594F /* Splash@2x.png in Resources */,
 				7F1D66C819090DAD00BA43C9 /* ObjectAL (OSX)-Info.plist in Resources */,
 				7FBDD4A419081A3C0098594F /* Button large@2x.png in Resources */,
 				7F1D66DA19091E5000BA43C9 /* ClickButton.m4a in Resources */,
@@ -915,14 +952,17 @@
 				7FBDD4A519081A3C0098594F /* Button small.png in Resources */,
 				7F4108F618EEDC42007F8750 /* InfoPlist.strings in Resources */,
 				7FAED715190B069500ABF9DB /* UI Sound.m4a in Resources */,
+				7F94C893190EB10A00E1E041 /* SQUARES LOGO Test.png in Resources */,
 				7F1D66A719090DAD00BA43C9 /* ObjectAL-Overview1.png in Resources */,
+				7F94C899190EB10A00E1E041 /* squares_logo iPad.png in Resources */,
 				7FAFCC5318F4C82700E5EEFD /* Background@2x.png in Resources */,
 				7F1D66E5190952CB00BA43C9 /* ParticleSmoke.png in Resources */,
 				7F1D66AB19090DAD00BA43C9 /* ObjectAL-Overview2.svg in Resources */,
 				7F2EF1A718F15A5D00ED4852 /* SquareGameOverViewController.xib in Resources */,
+				7FAC485C190E8FA700CC4227 /* facebook@2x.png in Resources */,
 				7FBDD4A619081A3C0098594F /* Button small@2x.png in Resources */,
 				7FAED712190B069500ABF9DB /* GameOver.m4a in Resources */,
-				7FBDD4AB19081A3C0098594F /* Splash iphone5.png in Resources */,
+				7F94C892190EB10A00E1E041 /* SQUARES LOGO Test @2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,7 +1120,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -1102,8 +1142,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Romain Tholimet (32KR299628)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Romain Tholimet (32KR299628)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1113,7 +1153,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1125,12 +1165,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Romain Tholimet (KEQDP78NPM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squares/Squares-Prefix.pch";
 				INFOPLIST_FILE = "Squares/Squares-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "52F4D42D-676C-48DC-B548-6E6C66ED3B7E";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1140,13 +1181,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Romain Tholimet (32KR299628)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Romain Tholimet (32KR299628)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squares/Squares-Prefix.pch";
 				INFOPLIST_FILE = "Squares/Squares-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "BF695DD7-B12D-41BE-A09A-9FE5FAB16B7A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

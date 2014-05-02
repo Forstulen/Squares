@@ -43,6 +43,7 @@
 }
 
 - (void)setProperties {
+    _squareLevelDetail = (NSString *)[_squareCurrentLevel safeObjectForKey:SQUARE_LEVELS_LEVEL_DETAIL];
     _squareRefreshDelay = [(NSNumber *)[_squareCurrentLevel safeObjectForKey:SQUARE_LEVELS_REFRESH_DELAY] floatValue];
     _squareSpawnDelay = [(NSNumber *)[_squareCurrentLevel safeObjectForKey:SQUARE_LEVELS_SPAWN_DELAY] floatValue];
     _squareRespawn = [(NSNumber *)[_squareCurrentLevel safeObjectForKey:SQUARE_LEVELS_RESPAWN] boolValue];

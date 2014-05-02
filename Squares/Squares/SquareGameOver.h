@@ -14,6 +14,5 @@
 
 - (id)initWithPoint:(CGPoint)point withGrid:(SquareGrid *)grid;
 - (void)beginAnimation;
-- (void)doAction;
 
 @end

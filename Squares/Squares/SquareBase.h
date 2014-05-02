@@ -41,7 +41,7 @@ typedef enum {
 @property (nonatomic) SquareBaseColor squareColor;
 @property (nonatomic) CGFloat squareScalingDuration;
 @property (nonatomic) CGFloat squareScalingDelay;
-@property (nonatomic) NSUInteger    squareScore;
+@property (nonatomic) NSInteger    squareScore;
 @property (nonatomic) NSUInteger    squareTouches;
 
 @end

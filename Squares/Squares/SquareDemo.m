@@ -46,7 +46,8 @@
         
     [self.superview addSubview:explosion];
     [explosion startExplosion:((CALayer*)self.layer.presentationLayer).frame withColor:[self getUIColor:self.squareColor]];
-        
+    
+    self.image = nil;
     [self.layer removeAllAnimations];
     [self removeFromSuperview];
 }

@@ -64,6 +64,7 @@
 }
 
 - (void)endAnimation {
+    self.image = nil;
     [self.layer removeAllAnimations];
     [super endAnimation];
 }

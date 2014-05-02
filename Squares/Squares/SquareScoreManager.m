@@ -66,11 +66,14 @@
     if (_squareScore > SQUARE_SCORE_MAX) {
         _squareScore = SQUARE_SCORE_MAX;
         [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_BEST_SCORE_EVER object:nil userInfo:nil];
-    }
-    else if (_squareBonusMultiplier)
+    } else if (square.squareScore < 0) {
+        _squareScore *= (100 + square.squareScore) / 100.0f;
+        [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_MULTIPLIER_RESET object:nil];
+    } else if (_squareBonusMultiplier) {
         _squareScore += square.squareScore * _squareBonusMultiplier;
-    else
+    } else {
         _squareScore += square.squareScore;
+    }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:SQUARE_UPDATE_SCORE object:nil userInfo:nil];
     

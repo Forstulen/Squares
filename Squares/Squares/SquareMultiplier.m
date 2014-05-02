@@ -22,6 +22,7 @@
         _squareMultplierLabel =[[UILabel alloc] init];
         _squareMultplierLabel.text = message;
         _squareMultplierLabel.font = SQUARE_FONT_BIG;
+        _squareMultplierLabel.backgroundColor = [UIColor clearColor];
         _squareMultplierLabel.textColor = SQUARE_COLOR_YELLOW;
         _squareMultplierLabel.contentMode = UIViewContentModeScaleAspectFit;
         _squareMultplierLabel.textAlignment = NSTextAlignmentCenter;

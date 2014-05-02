@@ -28,6 +28,7 @@ typedef enum {
 - (void)resetLevel;
 
 @property (nonatomic, readonly) SquareGameType      squareGameType;
+@property (nonatomic, readonly) NSString            *squareLevelDetail;
 @property (nonatomic, readonly) CGFloat             squareRefreshDelay;
 @property (nonatomic, readonly) CGFloat             squareSpawnDelay;
 @property (nonatomic, readonly) NSUInteger          squareCurrentIndex;

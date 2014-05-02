@@ -7,18 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SquareSocialController.h"
 
-@protocol SquareGameOvertDelegate <NSObject>
+@protocol SquareGameOverDelegate <NSObject>
 - (void)restartGame;
 - (void)quitGame;
 @end
 
-@interface SquareGameOverViewController : UIViewController
+@interface SquareGameOverViewController : UIViewController <SquareSocialDelegate>{
+    UIActivityIndicatorView     *_squareActivityIndicator;
+}
 
 - (void)presentAnimatedGameOverView:(UIView *)parent withCompletion:(void (^)(BOOL))block;
 - (void)dismissAnimatedGameOverView:(UIView *)parent withCompletion:(void (^)(BOOL))block;
 
-@property (strong, nonatomic) id<SquareGameOvertDelegate> squareGameOverViewDelegate;
+@property (strong, nonatomic) id<SquareGameOverDelegate> squareGameOverViewDelegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *squareTitle;
 @property (weak, nonatomic) IBOutlet UILabel *squareScore;

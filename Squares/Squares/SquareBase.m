@@ -137,6 +137,8 @@ static NSString * const squareColorArray[] = {
                      }
      
                      completion:^(BOOL finished) {
+                         self.image = nil;
+                         [self.layer removeAllAnimations];
                          [self removeFromSuperview];
                      }
      ];
@@ -153,6 +155,7 @@ static NSString * const squareColorArray[] = {
         [self.superview addSubview:explosion];
         [explosion startExplosion:((CALayer*)self.layer.presentationLayer).frame withColor:[self getUIColor:self.squareColor]];
         
+        self.image = nil;
         [_squareGrid removeSquare:self];
         [self.layer removeAllAnimations];
         [self removeFromSuperview];

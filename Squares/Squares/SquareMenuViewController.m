@@ -31,27 +31,32 @@
     return self;
 }
 
+- (void)dealloc {
+    [_squareMenuLoop removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    _squareMenuLoop = nil;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self.squareMainModeButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_CYAN] forState:UIControlStateNormal];
+    
+    self.squareMainModeButton.layer.borderColor = SQUARE_COLOR_PANE.CGColor;
+    self.squareMainModeButton.layer.borderWidth = 1.0f;
     self.squareMainModeButton.titleLabel.font = SQUARE_FONT_MEDIUM;
-    self.squareMainModeButton.titleLabel.layer.shadowColor = [UIColor whiteColor].CGColor;
-    self.squareMainModeButton.titleLabel.layer.shadowOffset = CGSizeMake(0.0, 0.0);
-    self.squareMainModeButton.titleLabel.layer.shadowRadius = 10.0;
-    self.squareMainModeButton.titleLabel.layer.shadowOpacity = 0.3;
-    self.squareMainModeButton.titleLabel.layer.masksToBounds = NO;
+    [self.squareMainModeButton setTitleColor:SQUARE_COLOR_PANE forState:UIControlStateNormal];
     
-    [self.squareMainModeButton setTitleColor:SQUARE_COLOR_CYAN forState:UIControlStateNormal];
-    
-    [self.squareHardCoreButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_ORANGE] forState:UIControlStateNormal];
+    self.squareHardCoreButton.layer.borderColor = SQUARE_COLOR_PANE.CGColor;
+    self.squareHardCoreButton.layer.borderWidth = 1.0f;
     self.squareHardCoreButton.titleLabel.font = SQUARE_FONT_MEDIUM;
-    [self.squareHardCoreButton setTitleColor:SQUARE_COLOR_ORANGE forState:UIControlStateNormal];
+    [self.squareHardCoreButton setTitleColor:SQUARE_COLOR_PANE forState:UIControlStateNormal];
     
-    [self.squareOptionsButton setBackgroundImage:[UIImage imageNamed:SQUARE_SMALL_BUTTON withColor:SQUARE_COLOR_YELLOW] forState:UIControlStateNormal];
+    self.squareOptionsButton.layer.borderColor = SQUARE_COLOR_PANE.CGColor;
+    self.squareOptionsButton.layer.borderWidth = 1.0f;
     self.squareOptionsButton.titleLabel.font = SQUARE_FONT_MEDIUM;
-    [self.squareOptionsButton setTitleColor:SQUARE_COLOR_YELLOW forState:UIControlStateNormal];
+    [self.squareOptionsButton setTitleColor:SQUARE_COLOR_PANE forState:UIControlStateNormal];
+    
+    self.squareCopyright.font = SQUARE_FONT_SMALL;
     
     if (!_squareMenuLoop) {
         _squareMenuLoop = [CADisplayLink displayLinkWithTarget:self
@@ -94,13 +99,12 @@
 - (void)displaySquares {
     if (CACurrentMediaTime() - _squareElapsedTimeDemo > SQUARE_DELAY_MENU_SQUARE) {
         NSInteger   value = arc4random() % 3;
-        UIView      *popZone = self.squarePopZone3;
+        UIView      *popZone = self.squarePopZone2;
                     
         if (value == 0) {
             popZone = self.squarePopZone1;
-        } else if (value == 1) {
-            popZone = self.squarePopZone2;
         }
+        
         CGPoint point = CGPointMake(arc4random() % (int)popZone.frame.size.width,
                                     arc4random() % (int)popZone.frame.size.height);
         

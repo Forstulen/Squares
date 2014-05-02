@@ -169,7 +169,7 @@ static NSString * const squareTypeArray[] = {
                                                         SQUARE_GRID_BLOCK_SIZE + SQUARE_GRID_BLOCK_SIZE * SQUARE_GRID_MIN_SPACE_PERCENT / 100.0,
                                                         SQUARE_GRID_BLOCK_SIZE + SQUARE_GRID_BLOCK_SIZE * SQUARE_GRID_MIN_SPACE_PERCENT / 100.0f)]) {
                 SquareBase *square = [self getSquareWithType:type withPoint:point];
-
+                
                 [_squareGrid setObject:square forKey:val];
                 ++_squareNumber;
                 return square;

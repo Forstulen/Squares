@@ -11,6 +11,8 @@
 
 //Defines
 
+#define     IS_RETINA                           ([[UIScreen mainScreen] scale] == 2.0)
+
 #define     SQUARE_FRAME_INTERVAL               (2)
 
 #define     SQUARE_SCORE_MAX                    (999999999)
@@ -35,7 +37,7 @@
 #define     SQUARE_GAME_STARTING_RESPAWN_DELAY  (2)
 
 #define     SQUARE_DEMO                         [UIImage imageNamed:SQUARE_IMAGE_BASE];
-#define     SQUARE_DEMO_SCORE                   (2)
+#define     SQUARE_DEMO_SCORE                   (10)
 #define     SQUARE_DEMO_DURATION                (7)
 #define     SQUARE_DEMO_DELAY                   (0)
 #define     SQUARE_DEMO_TOUCHES_NUMBER          (1)
@@ -43,7 +45,7 @@
 #define     SQUARE_DEMO_ENDING_SIZE             (20)
 
 #define     SQUARE_BASE                         [UIImage imageNamed:SQUARE_IMAGE_BASE];
-#define     SQUARE_BASE_SCORE                   (2)
+#define     SQUARE_BASE_SCORE                   (10)
 #define     SQUARE_BASE_DURATION                (5)
 #define     SQUARE_BASE_DELAY                   (0)
 #define     SQUARE_BASE_TOUCHES_NUMBER          (1)
@@ -59,15 +61,15 @@
 #define     SQUARE_INDESTRUCTIBLE_ENDING_SIZE    (50)
 
 #define     SQUARE_GAMEOVER                     [UIImage imageNamed:SQUARE_IMAGE_GAMEOVER];
-#define     SQUARE_GAMEOVER_SCORE               (0)
-#define     SQUARE_GAMEOVER_DURATION            (5)
+#define     SQUARE_GAMEOVER_SCORE               (-25)
+#define     SQUARE_GAMEOVER_DURATION            (3)
 #define     SQUARE_GAMEOVER_DELAY               (0)
-#define     SQUARE_GAMEOVER_TOUCHES_NUMBER      (-1)
+#define     SQUARE_GAMEOVER_TOUCHES_NUMBER      (1)
 #define     SQUARE_GAMEOVER_STARTING_SIZE       (25)
-#define     SQUARE_GAMEOVER_ENDING_SIZE         (50)
+#define     SQUARE_GAMEOVER_ENDING_SIZE         (75)
 
 #define     SQUARE_RESILIENT                     [UIImage imageNamed:SQUARE_IMAGE_RESILIENT];
-#define     SQUARE_RESILIENT_SCORE               (10)
+#define     SQUARE_RESILIENT_SCORE               (50)
 #define     SQUARE_RESILIENT_DURATION            (3)
 #define     SQUARE_RESILIENT_DELAY               (0)
 #define     SQUARE_RESILIENT_TOUCHES_NUMBER      (3)
@@ -75,14 +77,14 @@
 #define     SQUARE_RESILIENT_ENDING_SIZE         (100)
 
 #define     SQUARE_EXPONENTIAL                     [UIImage imageNamed:SQUARE_IMAGE_EXPONENTIAL];
-#define     SQUARE_EXPONENTIAL_SCORE               (5)
-#define     SQUARE_EXPONENTIAL_FIRST_STEP_DURATION  (2)
+#define     SQUARE_EXPONENTIAL_SCORE               (25)
+#define     SQUARE_EXPONENTIAL_FIRST_STEP_DURATION  (2.5)
 #define     SQUARE_EXPONENTIAL_SECOND_STEP_DURATION (0.2)
 #define     SQUARE_EXPONENTIAL_DELAY               (0)
 #define     SQUARE_EXPONENTIAL_TOUCHES_NUMBER      (1)
 #define     SQUARE_EXPONENTIAL_STARTING_SIZE       (25)
 #define     SQUARE_EXPONENTIAL_MIDDLE_SIZE          (50)
-#define     SQUARE_EXPONENTIAL_ENDING_SIZE         (100)
+#define     SQUARE_EXPONENTIAL_ENDING_SIZE         (125)
 
 #define     SQUARE_COLOR_ORANGE                   [UIColor colorWithRed:(223.f / 255.f) green:(116.f / 255.f) blue:(12.f / 255.f) alpha:1]
 #define     SQUARE_COLOR_YELLOW                 [UIColor colorWithRed:(255.f / 255.f) green:(230.f / 255.f) blue:(	77.f / 255.f) alpha:1]
@@ -124,6 +126,7 @@ static NSString     *SQUARE_LEVELS_PLIST = @"Levels";
 static NSString     *SQUARE_LEVELS_TRAINING = @"Training";
 static NSString     *SQUARE_LEVELS_HARDCORE = @"Hardcore";
 
+static NSString     *SQUARE_LEVELS_LEVEL_DETAIL = @"LevelDetail";
 static NSString     *SQUARE_LEVELS_REFRESH_DELAY = @"RefreshDelay";
 static NSString     *SQUARE_LEVELS_SPAWN_DELAY = @"SpawnDelay";
 static NSString     *SQUARE_LEVELS_RESPAWN = @"Respawn";

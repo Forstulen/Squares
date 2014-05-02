@@ -16,16 +16,18 @@
 }
 
 - (id)initWithParent:(UIView *)parent withMessage:(NSString *)message {
-    CGRect frame = CGRectMake(parent.frame.size.width / 2 - 100, parent.frame.size.height / 2 - 100, 200, 200);
+    CGRect frame = CGRectMake(0, 0, parent.frame.size.width, parent.frame.size.height);
     
     if (self = [super initWithFrame:frame]) {
         _squareLevelLabel = [[UILabel alloc] init];
         _squareLevelLabel.text = message;
         _squareLevelLabel.font = SQUARE_FONT_HUGE;
         _squareLevelLabel.textColor = [UIColor whiteColor];
+        _squareLevelLabel.backgroundColor = [UIColor clearColor];
         _squareLevelLabel.contentMode = UIViewContentModeScaleAspectFit;
         _squareLevelLabel.textAlignment = NSTextAlignmentCenter;
-        
+        _squareLevelLabel.numberOfLines = 0;
+       
         [parent insertSubview:self atIndex:0];
         [self addSubview:_squareLevelLabel];
         self.backgroundColor = [UIColor clearColor];

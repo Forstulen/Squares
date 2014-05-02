@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *squarePopZone1;
 @property (weak, nonatomic) IBOutlet UIView *squarePopZone2;
-@property (weak, nonatomic) IBOutlet UIView *squarePopZone3;
+
+@property (weak, nonatomic) IBOutlet UILabel *squareCopyright;
 
 @end
