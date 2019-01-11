@@ -43,6 +43,7 @@
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *squareMultiplier;
 @property (weak, nonatomic) IBOutlet UILabel *squarePauseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *squarePauseHint;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *squarePauseButton;
 
 @end

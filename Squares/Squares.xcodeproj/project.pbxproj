@@ -81,7 +81,6 @@
 		7F4108EC18EEDC42007F8750 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4108EB18EEDC42007F8750 /* Foundation.framework */; };
 		7F4108EE18EEDC42007F8750 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4108ED18EEDC42007F8750 /* CoreGraphics.framework */; };
 		7F4108F018EEDC42007F8750 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4108EF18EEDC42007F8750 /* UIKit.framework */; };
-		7F4108F618EEDC42007F8750 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F4108F418EEDC42007F8750 /* InfoPlist.strings */; };
 		7F4108F818EEDC42007F8750 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4108F718EEDC42007F8750 /* main.m */; };
 		7F4108FC18EEDC42007F8750 /* SquareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4108FB18EEDC42007F8750 /* SquareAppDelegate.m */; };
 		7F41090418EEDC42007F8750 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F41090318EEDC42007F8750 /* Images.xcassets */; };
@@ -109,6 +108,8 @@
 		7FAED71B190C649700ABF9DB /* SquareParticlesEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAED71A190C649700ABF9DB /* SquareParticlesEmitter.m */; };
 		7FAFCC5218F4C82700E5EEFD /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAFCC3C18F4C82700E5EEFD /* Background.png */; };
 		7FAFCC5318F4C82700E5EEFD /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FAFCC3D18F4C82700E5EEFD /* Background@2x.png */; };
+		7FB3783621E7F2D600E9D897 /* github_logo@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3783421E7F2D600E9D897 /* github_logo@1x.png */; };
+		7FB3783721E7F2D600E9D897 /* github_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB3783521E7F2D600E9D897 /* github_logo@2x.png */; };
 		7FB96A5B18F6094500781FA3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB96A5A18F6094500781FA3 /* Social.framework */; };
 		7FB96A5D18F60B2100781FA3 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB96A5C18F60B2100781FA3 /* Accounts.framework */; };
 		7FB96A6018F60D3200781FA3 /* SquareSocialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB96A5F18F60D3200781FA3 /* SquareSocialController.m */; };
@@ -287,7 +288,6 @@
 		7F4108ED18EEDC42007F8750 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7F4108EF18EEDC42007F8750 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7F4108F318EEDC42007F8750 /* Squares-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Squares-Info.plist"; sourceTree = "<group>"; };
-		7F4108F518EEDC42007F8750 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F4108F718EEDC42007F8750 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F4108F918EEDC42007F8750 /* Squares-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Squares-Prefix.pch"; sourceTree = "<group>"; };
 		7F4108FA18EEDC42007F8750 /* SquareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareAppDelegate.h; sourceTree = "<group>"; };
@@ -336,6 +336,8 @@
 		7FAFCC3D18F4C82700E5EEFD /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = "<group>"; };
 		7FAFCC4218F4C82700E5EEFD /* Square.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Square.ttf; sourceTree = "<group>"; };
 		7FAFCC4B18F4C82700E5EEFD /* Squareo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Squareo.ttf; sourceTree = "<group>"; };
+		7FB3783421E7F2D600E9D897 /* github_logo@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "github_logo@1x.png"; sourceTree = "<group>"; };
+		7FB3783521E7F2D600E9D897 /* github_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "github_logo@2x.png"; sourceTree = "<group>"; };
 		7FB96A5A18F6094500781FA3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7FB96A5C18F60B2100781FA3 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		7FB96A5E18F60D3200781FA3 /* SquareSocialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareSocialController.h; sourceTree = "<group>"; };
@@ -715,7 +717,6 @@
 			isa = PBXGroup;
 			children = (
 				7F4108F318EEDC42007F8750 /* Squares-Info.plist */,
-				7F4108F418EEDC42007F8750 /* InfoPlist.strings */,
 				7F4108F718EEDC42007F8750 /* main.m */,
 				7F4108F918EEDC42007F8750 /* Squares-Prefix.pch */,
 			);
@@ -753,6 +754,8 @@
 		7FB96A5818F608FA00781FA3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7FB3783421E7F2D600E9D897 /* github_logo@1x.png */,
+				7FB3783521E7F2D600E9D897 /* github_logo@2x.png */,
 				7FE5EC1F190EB2DE0081B4FA /* Splash screen @2x.png */,
 				7FE5EC20190EB2DE0081B4FA /* Splash screen iPhone5 @2x.png */,
 				7FE5EC21190EB2DE0081B4FA /* Splash screen.png */,
@@ -851,7 +854,8 @@
 				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					7F4108E718EEDC42007F8750 = {
-						DevelopmentTeam = 32KR299628;
+						DevelopmentTeam = 2Y6B6P3983;
+						ProvisioningStyle = Automatic;
 					};
 					7F41090818EEDC42007F8750 = {
 						TestTargetID = 7F4108E718EEDC42007F8750;
@@ -938,6 +942,7 @@
 				7F41092918EEF1EC007F8750 /* SquareMenuViewController.xib in Resources */,
 				7F2EF1B318F226C200ED4852 /* SquareGameViewController.xib in Resources */,
 				7FAFCC5218F4C82700E5EEFD /* Background.png in Resources */,
+				7FB3783621E7F2D600E9D897 /* github_logo@1x.png in Resources */,
 				7FC20D5A190A5F5900B041CD /* SquareOptionsViewController.xib in Resources */,
 				7F41090418EEDC42007F8750 /* Images.xcassets in Resources */,
 				7FAED711190B069500ABF9DB /* Explosion.m4a in Resources */,
@@ -950,7 +955,6 @@
 				7F1D66AA19090DAD00BA43C9 /* ObjectAL-Overview2.png in Resources */,
 				7F1D66A519090DAD00BA43C9 /* build_docs.sh in Resources */,
 				7FBDD4A519081A3C0098594F /* Button small.png in Resources */,
-				7F4108F618EEDC42007F8750 /* InfoPlist.strings in Resources */,
 				7FAED715190B069500ABF9DB /* UI Sound.m4a in Resources */,
 				7F94C893190EB10A00E1E041 /* SQUARES LOGO Test.png in Resources */,
 				7F1D66A719090DAD00BA43C9 /* ObjectAL-Overview1.png in Resources */,
@@ -962,6 +966,7 @@
 				7FAC485C190E8FA700CC4227 /* facebook@2x.png in Resources */,
 				7FBDD4A619081A3C0098594F /* Button small@2x.png in Resources */,
 				7FAED712190B069500ABF9DB /* GameOver.m4a in Resources */,
+				7FB3783721E7F2D600E9D897 /* github_logo@2x.png in Resources */,
 				7F94C892190EB10A00E1E041 /* SQUARES LOGO Test @2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1068,14 +1073,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		7F4108F418EEDC42007F8750 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7F4108F518EEDC42007F8750 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		7F41091318EEDC42007F8750 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1166,12 +1163,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Y6B6P3983;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squares/Squares-Prefix.pch";
 				INFOPLIST_FILE = "Squares/Squares-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forstulen.squarz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "52F4D42D-676C-48DC-B548-6E6C66ED3B7E";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1181,14 +1181,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Romain Tholimet (32KR299628)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Romain Tholimet (32KR299628)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Y6B6P3983;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squares/Squares-Prefix.pch";
 				INFOPLIST_FILE = "Squares/Squares-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.forstulen.squarz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "BF695DD7-B12D-41BE-A09A-9FE5FAB16B7A";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

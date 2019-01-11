@@ -50,11 +50,16 @@
     [self.squareQuitButton setBackgroundImage:nil forState:UIControlStateNormal];
     self.squareQuitButton.titleLabel.backgroundColor = [UIColor clearColor];
     
+    [SquareSocialController sharedSquareSocialController].squareDelegate = self;
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
     _squareActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     _squareActivityIndicator.frame = self.view.frame;
     [self.view addSubview:_squareActivityIndicator];
     _squareActivityIndicator.hidesWhenStopped = YES;
-    [SquareSocialController sharedSquareSocialController].squareDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,13 +69,17 @@
 }
 
 - (void)startRequest {
-    [_squareActivityIndicator startAnimating];
-    self.squareFacebookButton.enabled = NO;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_squareActivityIndicator startAnimating];
+        self.squareFacebookButton.enabled = NO;
+    });
 }
 
 - (void)stopRequest {
-    [_squareActivityIndicator stopAnimating];
-    self.squareFacebookButton.enabled = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_squareActivityIndicator stopAnimating];
+        self.squareFacebookButton.enabled = YES;
+    });
 }
      
 - (IBAction)postScoreOnFacebook:(id)sender {

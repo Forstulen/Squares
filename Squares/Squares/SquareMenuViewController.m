@@ -145,4 +145,9 @@
     [[self navigationController] pushViewController:optionController animated:NO];
 }
 
+- (IBAction)redirectToGithub:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/Forstulen"]];
+}
+
+
 @end

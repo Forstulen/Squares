@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SquareGameViewController">
@@ -11,71 +15,77 @@
                 <outlet property="Score" destination="kO6-iR-RLU" id="AoH-kB-iKb"/>
                 <outlet property="squareMultiplier" destination="Fzp-VR-Cta" id="Yxw-mQ-im9"/>
                 <outlet property="squarePauseButton" destination="jGU-qx-QaW" id="O9H-6C-Fae"/>
+                <outlet property="squarePauseHint" destination="QBh-qP-nP7" id="dK9-ZB-Naj"/>
                 <outlet property="squarePauseLabel" destination="MuH-8I-SLH" id="x3N-4j-89F"/>
                 <outlet property="view" destination="iN0-l3-epB" id="x6Y-2E-QjZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="DZQ-vV-XnG">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESS HERE TO PAUSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="QBh-qP-nP7" userLabel="PressHere">
+                    <rect key="frame" x="42" y="66" width="205" height="12"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO6-iR-RLU" userLabel="Score">
-                    <rect key="frame" x="20" y="20" width="194" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="20" y="20" width="249" height="60"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="N4f-4y-1YU"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="jGU-qx-QaW" appends="YES" id="P65-dk-2UW"/>
                     </connections>
                 </label>
                 <label hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAUSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuH-8I-SLH">
-                    <rect key="frame" x="67" y="259" width="185" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="67" y="308.5" width="240" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="FyC-95-KGS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GeF-3k-1nI" userLabel="GameBoard">
-                    <rect key="frame" x="20" y="88" width="280" height="460"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="20" y="88" width="335" height="559"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzp-VR-Cta" userLabel="Multiplier">
-                    <rect key="frame" x="227" y="20" width="73" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="282" y="20" width="73" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="73" id="KZ0-X4-WCH"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="jGU-qx-QaW" appends="YES" id="n8E-He-Zyu"/>
                     </connections>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Fzp-VR-Cta" firstAttribute="leading" secondItem="kO6-iR-RLU" secondAttribute="trailing" constant="13" id="4mj-6e-VJP"/>
+                <constraint firstItem="Fzp-VR-Cta" firstAttribute="leading" secondItem="QBh-qP-nP7" secondAttribute="trailing" constant="35" id="6cZ-6g-ev7"/>
                 <constraint firstItem="Fzp-VR-Cta" firstAttribute="baseline" secondItem="kO6-iR-RLU" secondAttribute="baseline" id="7kY-CL-C3o"/>
+                <constraint firstItem="GeF-3k-1nI" firstAttribute="top" secondItem="QBh-qP-nP7" secondAttribute="bottom" constant="10" id="APS-I4-KW2"/>
                 <constraint firstAttribute="trailing" secondItem="Fzp-VR-Cta" secondAttribute="trailing" constant="20" symbolic="YES" id="CmM-LG-VyW"/>
                 <constraint firstItem="DZQ-vV-XnG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FfM-4P-w2O"/>
                 <constraint firstAttribute="trailing" secondItem="MuH-8I-SLH" secondAttribute="trailing" constant="68" id="I0r-9c-iFj"/>
@@ -84,6 +94,7 @@
                 <constraint firstItem="DZQ-vV-XnG" firstAttribute="centerY" secondItem="MuH-8I-SLH" secondAttribute="centerY" id="Nwj-G6-otI"/>
                 <constraint firstAttribute="bottom" secondItem="DZQ-vV-XnG" secondAttribute="bottom" id="TtQ-zI-HE5"/>
                 <constraint firstAttribute="bottom" secondItem="GeF-3k-1nI" secondAttribute="bottom" constant="20" symbolic="YES" id="UcC-uE-FGS"/>
+                <constraint firstItem="QBh-qP-nP7" firstAttribute="centerX" secondItem="kO6-iR-RLU" secondAttribute="centerX" id="VTN-lh-Bfp"/>
                 <constraint firstItem="DZQ-vV-XnG" firstAttribute="centerX" secondItem="GeF-3k-1nI" secondAttribute="centerX" id="WH6-be-nWa"/>
                 <constraint firstItem="kO6-iR-RLU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" symbolic="YES" id="X7X-Kc-FYu"/>
                 <constraint firstItem="kO6-iR-RLU" firstAttribute="leading" secondItem="GeF-3k-1nI" secondAttribute="leading" id="eAz-c0-Vlj"/>
@@ -92,8 +103,7 @@
                 <constraint firstItem="DZQ-vV-XnG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="smL-Uo-5GP"/>
                 <constraint firstItem="Fzp-VR-Cta" firstAttribute="trailing" secondItem="GeF-3k-1nI" secondAttribute="trailing" id="tYF-UR-49G"/>
             </constraints>
-            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="138.40000000000001" y="147.97601199400302"/>
         </view>
         <tapGestureRecognizer id="jGU-qx-QaW">
             <connections>
@@ -102,6 +112,6 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="Background.png" width="640" height="960"/>
+        <image name="Background.png" width="320" height="568"/>
     </resources>
 </document>

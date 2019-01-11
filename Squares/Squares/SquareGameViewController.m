@@ -54,6 +54,7 @@
     self.Score.font = SQUARE_FONT_BIG;
     self.squareMultiplier.font = SQUARE_FONT_BIG ;
     self.squarePauseLabel.font = SQUARE_FONT_HUGE;
+    self.squarePauseHint.font = SQUARE_FONT_BIG;
     self.squarePauseButton.enabled = NO;
     
     self.Score.layer.borderColor = [UIColor whiteColor].CGColor;
